@@ -3,8 +3,8 @@
 
 <html>
 	<head>
-	
-		<title>Ì°³ÔÉß</title>
+	<meta hcharset="UTF-8">
+		<title>è´ªåƒè›‡</title>
 		<style type="text/css">
 			canvas{
 			margin: 10px auto ;
@@ -22,16 +22,16 @@
 	<body>
 		
 		
-		<div id="attention">·½Ïò¼ü¿ØÖÆ¡°ÉÏ£¬ÏÂ£¬×ó£¬ÓÒ¡±</div>
+		<div id="attention">æ–¹å‘é”®æ§åˆ¶â€œä¸Šï¼Œä¸‹ï¼Œå·¦ï¼Œå³â€</div>
 		<canvas id="myCanvas" width="549" height="549" style="border:solid 1px red;">
 		
 		</canvas>
 		
 		<div id="inputs">
-		<input type="button" name="" id="" value="ÉÏ">
-		<input type="button" name="" id="" value="ÓÒ">
-		<input type="button" name="" id="" value="ÏÂ">
-		<input type="button" name="" id="" value="×ó">
+		<input type="button" name="" id="" value="ä¸Š">
+		<input type="button" name="" id="" value="å³">
+		<input type="button" name="" id="" value="ä¸‹">
+		<input type="button" name="" id="" value="å·¦">
 		</div>
 		<script type="text/javascript">
 			var snake =[
@@ -45,22 +45,22 @@
 			window.onload = function () {
 				document.onkeydown=function(e){
 					var e = event || window.event || arguments.callee.caller.arguments[0];
-					if(e && e.keyCode==38){//ÉÏ
+					if(e && e.keyCode==38){//ä¸Š
 						if(snake[0].path!==2){
 							snake[0].path=0;
 						}
 					}
-					if(e && e.keyCode==39){//ÓÒ
+					if(e && e.keyCode==39){//å³
 						if(snake[0].path!==3){
 							snake[0].path=1;
 						}
 					}
-					if(e && e.keyCode==40){//ÏÂ
+					if(e && e.keyCode==40){//ä¸‹
 						if(snake[0].path!==0){
 							snake[0].path=2;
 						}
 					}
-					if(e && e.keyCode==37){//×ó
+					if(e && e.keyCode==37){//å·¦
 						if(snake[0].path!==1){
 							snake[0].path=3;
 						}
@@ -91,7 +91,7 @@
 					obj.lineTo(snake[i].x*11+10,snake[i].y*11+10);  
 					obj.lineTo(snake[i].x*11,snake[i].y*11+10);
 				
-					obj.fillStyle = snake[i].color;//Éè¶¨Ìî³äÑÕÉ«
+					obj.fillStyle = snake[i].color;//è®¾å®šå¡«å……é¢œè‰²
 	
 	
 					obj.fill()
@@ -104,7 +104,7 @@
 					obj.lineTo(foods[i].x*11+10,foods[i].y*11+10);  
 					obj.lineTo(foods[i].x*11,foods[i].y*11+10);
 				
-					obj.fillStyle = foods[i].color;//Éè¶¨Ìî³äÑÕÉ«
+					obj.fillStyle = foods[i].color;//è®¾å®šå¡«å……é¢œè‰²
 					obj.fill()
 					
 					obj.beginPath();
