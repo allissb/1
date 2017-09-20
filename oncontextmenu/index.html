@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="gbk">
-<title>�Զ���༶�Ҽ��˵�</title>
+<meta charset="utf-8">
+<title>自定义多级右键菜单</title>
 <style type="text/css">
 html,body{height:100%;overflow:hidden;}
 body,div,ul,li{margin:0;padding:0;}
@@ -38,19 +38,19 @@ window.onload = function ()
 	
 	for (i = 0; i < aLi.length; i++)
 	{
-		//Ϊ�����Ӳ˵���li���ϼ�ͷ
+		//为含有子菜单的li加上箭头
 		aLi[i].getElementsByTagName("ul")[0] && (aLi[i].className = "sub");
 		
-		//�������
+		//鼠标移入
 		aLi[i].onmouseover = function ()
 		{
 			var oThis = this;
 			var oUl = oThis.getElementsByTagName("ul");
 			
-			//���������ʽ
+			//鼠标移入样式
 			oThis.className += " active";			
 			
-			//��ʾ�Ӳ˵�
+			//显示子菜单
 			if (oUl[0])
 			{
 				clearTimeout(hideTimer);				
@@ -66,23 +66,23 @@ window.onload = function ()
 					oUl[0].style.left = oThis.offsetWidth + "px";
 					setWidth(oUl[0]);
 					
-					//�����ʾ��Χ					
+					//最大显示范围					
 					maxWidth = aDoc[0] - oUl[0].offsetWidth;
 					maxHeight = aDoc[1] - oUl[0].offsetHeight;
 					
-					//��ֹ���
+					//防止溢出
 					maxWidth < getOffset.left(oUl[0]) && (oUl[0].style.left = -oUl[0].clientWidth + "px");
 					maxHeight < getOffset.top(oUl[0]) && (oUl[0].style.top = -oUl[0].clientHeight + oThis.offsetTop + oThis.clientHeight + "px")
 				},300);
 			}			
 		};
 			
-		//����Ƴ�	
+		//鼠标移出	
 		aLi[i].onmouseout = function ()
 		{
 			var oThis = this;
 			var oUl = oThis.getElementsByTagName("ul");
-			//����Ƴ���ʽ
+			//鼠标移出样式
 			oThis.className = oThis.className.replace(/\s?active/,"");
 			
 			clearTimeout(showTimer);
@@ -98,7 +98,7 @@ window.onload = function ()
 	}	
 	
 	
-	//�Զ����Ҽ��˵�
+	//自定义右键菜单
 	document.oncontextmenu = function (event)
 	{
 		var event = event || window.event;
@@ -107,23 +107,23 @@ window.onload = function ()
 		oMenu.style.left = event.clientX + "px";
 		setWidth(aUl[0]);
 		
-		//�����ʾ��Χ
+		//最大显示范围
 		maxWidth = aDoc[0] - oMenu.offsetWidth;
 		maxHeight = aDoc[1] - oMenu.offsetHeight;
 		
-		//��ֹ�˵����
+		//防止菜单溢出
 		oMenu.offsetTop > maxHeight && (oMenu.style.top = maxHeight + "px");
 		oMenu.offsetLeft > maxWidth && (oMenu.style.left = maxWidth + "px");
 		return false;
 	};
 	
-	//������ز˵�
+	//点击隐藏菜单
 	document.onclick = function ()
 	{
 		oMenu.style.display = "none"	
 	};
 	
-	//ȡli�����Ŀ���, ������ͬ������li	
+	//取li中最大的宽度, 并赋给同级所有li	
 	function setWidth(obj)
 	{
 		maxWidth = 0;
@@ -141,45 +141,45 @@ window.onload = function ()
 </script>
 </head>
 <body>
-<center>�Զ����Ҽ��˵�������ҳ�����Ҽ��鿴Ч����</center>
+<center>自定义右键菜单，请在页面点击右键查看效果。</center>
 <div id="rightMenu">
     <ul>
-        <li><strong>JavaScript ѧϰ</strong></li>
+        <li><strong>JavaScript 学习</strong></li>
         <li>
-            ��һ��
+            第一课
             <ul>
-                <li>��ҳ��Чԭ������</li>
-                <li>��Ӧ�û�����</li>
-                <li>��ʾ��Ч��</li>
-                <li>�¼�����</li>
-                <li>Ԫ�����Բ���</li>
+                <li>网页特效原理分析</li>
+                <li>响应用户操作</li>
+                <li>提示框效果</li>
+                <li>事件驱动</li>
+                <li>元素属性操作</li>
             </ul>
         </li>
         <li>
-            ������
+            第三课
             <ul>
                 <li>
-                    JavaScript���
+                    JavaScript组成
                     <ul>
                         <li>ECMAScript</li>
                         <li>DOM</li>
                         <li>BOM</li>
-                        <li>JavaScript��������Դ</li>
+                        <li>JavaScript兼容性来源</li>
                     </ul>
                 </li>
-                <li>JavaScript���ֵ�λ�á���ȱ��</li>
-                <li>���������͡�typeof����������ת��������������</li>
+                <li>JavaScript出现的位置、优缺点</li>
+                <li>变量、类型、typeof、数据类型转换、变量作用域</li>
                 <li>
-                	�հ�
+                	闭包
                     <ul>
-                        <li>ʲô�Ǳհ�</li>
-                        <li>��Ӧ��</li>
-                        <li>�հ�ȱ��</li>
+                        <li>什么是闭包</li>
+                        <li>简单应用</li>
+                        <li>闭包缺点</li>
                     </ul>
                 </li>
-                <li>�����</li>
+                <li>运算符</li>
                 <li>
-                    ��ʱ����ʹ��
+                    定时器的使用
                     <ul>
                         <li>setInterval</li>
                         <li>setTimeout</li>
