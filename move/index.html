@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-<meta charset="gbk">
-<title>ÒÆ¶¯Ğ§¹û£¨°´¹ì¼£ÒÆ¶¯£©</title>
+<meta charset="utf-8">
+<title>ç§»åŠ¨æ•ˆæœï¼ˆæŒ‰è½¨è¿¹ç§»åŠ¨ï¼‰</title>
 <style type="text/css">
 body,div{margin:0;padding:0;}
 div{position:absolute;width:66px;height:45px;background:url(img/1.gif) no-repeat;top:100px;left:50px;}
@@ -19,8 +19,8 @@ window.onload = function ()
 	{		
 		(event || window.event).cancelBubble = true;
 		clearEvent();
-		this.value += "(ÒÑ¼¤»î)";
-		oP.innerHTML = "Êó±êµã»÷Ò³Ãæ£¬ ÈËÎï½«ÒÆ¶¯ÖÁÊó±êÎ»ÖÃ£¡";
+		this.value += "(å·²æ¿€æ´»)";
+		oP.innerHTML = "é¼ æ ‡ç‚¹å‡»é¡µé¢ï¼Œ äººç‰©å°†ç§»åŠ¨è‡³é¼ æ ‡ä½ç½®ï¼";
 		document.onclick = function (event)
 		{
 			var event = event || window.event;
@@ -34,8 +34,8 @@ window.onload = function ()
 	{		
 		(event || window.event).cancelBubble = true;
 		clearEvent();
-		this.value += "(ÒÑ¼¤»î)";
-		oP.innerHTML = "°´×¡Êó±ê×ó¼ü£¬ÔÚÒ³Ãæ»®¶¯£¬ÈËÎï½«°´ÕÕÊó±ê¹ì¼£ÒÆ¶¯¡£"
+		this.value += "(å·²æ¿€æ´»)";
+		oP.innerHTML = "æŒ‰ä½é¼ æ ‡å·¦é”®ï¼Œåœ¨é¡µé¢åˆ’åŠ¨ï¼Œäººç‰©å°†æŒ‰ç…§é¼ æ ‡è½¨è¿¹ç§»åŠ¨ã€‚"
 		var aPos = [{x:oDiv.offsetLeft, y:oDiv.offsetTop}];
 		document.onmousedown = function (event)
 		{
@@ -76,7 +76,7 @@ window.onload = function ()
 		document.onmouseup = null;
 		for (i = 0; i < aInput.length; i++)
 		{
-			aInput[i].value = aInput[i].value.replace("(ÒÑ¼¤»î)", "");
+			aInput[i].value = aInput[i].value.replace("(å·²æ¿€æ´»)", "");
 			aInput[i].onmousedown = aInput[i].onmouseup = function (event)
 			{
 				(event || window.event).cancelBubble = true;	
@@ -112,8 +112,8 @@ function doMove(obj, oTarget, fnEnd)
 </script>
 </head>
 <body>
-<input type="button" value="¸ù¾İÊó±êµã»÷Î»ÖÃÒÆ¶¯" /><input type="button" value="¸ù¾İ±êÊó±ê¹ì¼£ÒÆ¶¯" />
-<p>Çëµã»÷°´Å¥¼¤»î¹¦ÄÜ£¡</p>
+<input type="button" value="æ ¹æ®é¼ æ ‡ç‚¹å‡»ä½ç½®ç§»åŠ¨" /><input type="button" value="æ ¹æ®æ ‡é¼ æ ‡è½¨è¿¹ç§»åŠ¨" />
+<p>è¯·ç‚¹å‡»æŒ‰é’®æ¿€æ´»åŠŸèƒ½ï¼</p>
 <div></div>
 </body>
 </html>
