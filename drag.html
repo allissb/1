@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="gbk">
-<title>´°¿ÚÍÏ×§£¨¸Ä±ä´óĞ¡/×îĞ¡»¯/×î´ó»¯/»¹Ô­/¹Ø±Õ£©</title>
+<meta charset="utf-8">
+<title>çª—å£æ‹–æ‹½ï¼ˆæ”¹å˜å¤§å°/æœ€å°åŒ–/æœ€å¤§åŒ–/è¿˜åŸ/å…³é—­ï¼‰</title>
 <style type="text/css">
 body,div,h2{margin:0;padding:0;}
 body{background:url(img/bg.jpg);font:12px/1.5 \5fae\8f6f\96c5\9ed1;color:#333;}
@@ -82,7 +82,7 @@ function drag(oDrag, handle)
 		this.setCapture && this.setCapture();
 		return false
 	};	
-	//×î´ó»¯°´Å¥
+	//æœ€å¤§åŒ–æŒ‰é’®
 	oMax.onclick = function ()
 	{
 		oDrag.style.top = oDrag.style.left = 0;
@@ -91,7 +91,7 @@ function drag(oDrag, handle)
 		this.style.display = "none";
 		oRevert.style.display = "block";
 	};
-	//»¹Ô­°´Å¥
+	//è¿˜åŸæŒ‰é’®
 	oRevert.onclick = function ()
 	{		
 		oDrag.style.width = dragMinWidth + "px";
@@ -101,14 +101,14 @@ function drag(oDrag, handle)
 		this.style.display = "none";
 		oMax.style.display = "block";
 	};
-	//×îĞ¡»¯°´Å¥
+	//æœ€å°åŒ–æŒ‰é’®
 	oMin.onclick = oClose.onclick = function ()
 	{
 		oDrag.style.display = "none";
 		var oA = document.createElement("a");
 		oA.className = "open";
 		oA.href = "javascript:;";
-		oA.title = "»¹Ô­";
+		oA.title = "è¿˜åŸ";
 		document.body.appendChild(oA);
 		oA.onclick = function ()
 		{
@@ -117,7 +117,7 @@ function drag(oDrag, handle)
 			this.onclick = null;
 		};
 	};
-	//×èÖ¹Ã°Åİ
+	//é˜»æ­¢å†’æ³¡
 	oMin.onmousedown = oMax.onmousedown = oClose.onmousedown = function (event)
 	{
 		this.onfocus = function () {this.blur()};
@@ -185,12 +185,12 @@ window.onload = window.onresize = function ()
 	var oLB = oDrag.getElementsByClassName("resizeLB")[0];
 	
 	drag(oDrag, oTitle);
-	//ËÄ½Ç
+	//å››è§’
 	resize(oDrag, oLT, true, true, false, false);
 	resize(oDrag, oTR, false, true, false, false);
 	resize(oDrag, oBR, false, false, false, false);
 	resize(oDrag, oLB, true, false, false, false);
-	//ËÄ±ß
+	//å››è¾¹
 	resize(oDrag, oL, true, false, false, true);
 	resize(oDrag, oT, false, true, true, false);
 	resize(oDrag, oR, false, false, false, true);
@@ -204,12 +204,12 @@ window.onload = window.onresize = function ()
 <body>
 <div id="drag">
     <div class="title">
-        <h2>ÕâÊÇÒ»¸ö¿ÉÒÔÍÏ¶¯µÄ´°¿Ú</h2>
+        <h2>è¿™æ˜¯ä¸€ä¸ªå¯ä»¥æ‹–åŠ¨çš„çª—å£</h2>
         <div>
-            <a class="min" href="javascript:;" title="×îĞ¡»¯"></a>
-            <a class="max" href="javascript:;" title="×î´ó»¯"></a>
-            <a class="revert" href="javascript:;" title="»¹Ô­"></a>
-            <a class="close" href="javascript:;" title="¹Ø±Õ"></a>
+            <a class="min" href="javascript:;" title="æœ€å°åŒ–"></a>
+            <a class="max" href="javascript:;" title="æœ€å¤§åŒ–"></a>
+            <a class="revert" href="javascript:;" title="è¿˜åŸ"></a>
+            <a class="close" href="javascript:;" title="å…³é—­"></a>
         </div>
     </div>
     <div class="resizeL"></div>
@@ -221,10 +221,10 @@ window.onload = window.onresize = function ()
     <div class="resizeBR"></div>
     <div class="resizeLB"></div>
     <div class="content">
-        ¢Ù ´°¿Ú¿ÉÒÔÍÏ¶¯£»<br />
-        ¢Ú ´°¿Ú¿ÉÒÔÍ¨¹ı°Ë¸ö·½Ïò¸Ä±ä´óĞ¡£»<br />
-        ¢Û ´°¿Ú¿ÉÒÔ×îĞ¡»¯¡¢×î´ó»¯¡¢»¹Ô­¡¢¹Ø±Õ£»<br />
-        ¢Ü ÏŞÖÆ´°¿Ú×îĞ¡¿í¶È/¸ß¶È¡£
+        â‘  çª—å£å¯ä»¥æ‹–åŠ¨ï¼›<br />
+        â‘¡ çª—å£å¯ä»¥é€šè¿‡å…«ä¸ªæ–¹å‘æ”¹å˜å¤§å°ï¼›<br />
+        â‘¢ çª—å£å¯ä»¥æœ€å°åŒ–ã€æœ€å¤§åŒ–ã€è¿˜åŸã€å…³é—­ï¼›<br />
+        â‘£ é™åˆ¶çª—å£æœ€å°å®½åº¦/é«˜åº¦ã€‚
     </div>    
 </div>
 </body>
