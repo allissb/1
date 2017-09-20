@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-<meta charset="gbk">
-<title>仿苹果电脑任务栏菜单</title>
+<meta charset="utf-8">
+<title>eeeeeeee</title>
 <style type="text/css">
 body{margin:0;padding:0}
 #menu{position:absolute;width:100%;bottom:0;text-align:center;}
@@ -13,13 +13,13 @@ window.onload = function ()
 	var aImg = oMenu.getElementsByTagName("img");
 	var aWidth = [];
 	var i = 0;
-	//保存原宽度, 并设置当前宽度
+	
 	for (i = 0; i < aImg.length; i++)
 	{
 		aWidth.push(aImg[i].offsetWidth);
 		aImg[i].width = parseInt(aImg[i].offsetWidth / 2);
 	}
-	//鼠标移动事件
+	
 	document.onmousemove = function (event)
 	{
 		var event = event || window.event;
