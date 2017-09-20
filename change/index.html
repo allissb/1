@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-<meta charset="gbk">
-<title>自动播放</title>
+<meta charset="utf-8">
+<title>鑷姩鎾斁</title>
 <style>
 body,div,ul,li{margin:0;padding:0;}
 ul{list-style-type:none;}
@@ -25,7 +25,7 @@ window.onload = function ()
 	var timer = play = null;
 	var i = index = 0;	
 	
-	//切换按钮
+	//鍒囨崲鎸夐挳
 	for (i = 0; i < aNum.length; i++)
 	{
 		aNum[i].index = i;
@@ -44,7 +44,7 @@ window.onload = function ()
 		autoPlay()
 	};	
 	
-	//自动播放函数
+	//鑷姩鎾斁鍑芥暟
 	function autoPlay ()
 	{
 		play = setInterval(function () {
@@ -53,9 +53,9 @@ window.onload = function ()
 			show(index);		
 		},2000);	
 	}
-	autoPlay();//应用
+	autoPlay();//搴旂敤
 	
-	//图片切换, 淡入淡出效果
+	//鍥剧墖鍒囨崲, 娣″叆娣″嚭鏁堟灉
 	function show (a)
 	{
 		index = a;
