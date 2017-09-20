@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-<meta charset="gbk" />
-<title>ĞÇ¼¶ÆÀ·ÖÏµÍ³</title>
+<meta charset="utf-8" />
+<title>æ˜Ÿçº§è¯„åˆ†ç³»ç»Ÿ</title>
 <style>
 body,div,ul,li,p{margin:0;padding:0;}
 body{color:#666;font:12px/1.5 Arial;}
@@ -25,39 +25,39 @@ window.onload = function ()
 	var oP = oStar.getElementsByTagName("p")[0];
 	var i = iScore = iStar = 0;
 	var aMsg = [
-				"ºÜ²»ÂúÒâ|²îµÃÌ«ÀëÆ×£¬ÓëÂô¼ÒÃèÊöµÄÑÏÖØ²»·û£¬·Ç³£²»Âú",
-				"²»ÂúÒâ|²¿·ÖÓĞÆÆËğ£¬ÓëÂô¼ÒÃèÊöµÄ²»·û£¬²»ÂúÒâ",
-				"Ò»°ã|ÖÊÁ¿Ò»°ã£¬Ã»ÓĞÂô¼ÒÃèÊöµÄÄÇÃ´ºÃ",
-				"ÂúÒâ|ÖÊÁ¿²»´í£¬ÓëÂô¼ÒÃèÊöµÄ»ù±¾Ò»ÖÂ£¬»¹ÊÇÍ¦ÂúÒâµÄ",
-				"·Ç³£ÂúÒâ|ÖÊÁ¿·Ç³£ºÃ£¬ÓëÂô¼ÒÃèÊöµÄÍêÈ«Ò»ÖÂ£¬·Ç³£ÂúÒâ"
+				"å¾ˆä¸æ»¡æ„|å·®å¾—å¤ªç¦»è°±ï¼Œä¸å–å®¶æè¿°çš„ä¸¥é‡ä¸ç¬¦ï¼Œéå¸¸ä¸æ»¡",
+				"ä¸æ»¡æ„|éƒ¨åˆ†æœ‰ç ´æŸï¼Œä¸å–å®¶æè¿°çš„ä¸ç¬¦ï¼Œä¸æ»¡æ„",
+				"ä¸€èˆ¬|è´¨é‡ä¸€èˆ¬ï¼Œæ²¡æœ‰å–å®¶æè¿°çš„é‚£ä¹ˆå¥½",
+				"æ»¡æ„|è´¨é‡ä¸é”™ï¼Œä¸å–å®¶æè¿°çš„åŸºæœ¬ä¸€è‡´ï¼Œè¿˜æ˜¯æŒºæ»¡æ„çš„",
+				"éå¸¸æ»¡æ„|è´¨é‡éå¸¸å¥½ï¼Œä¸å–å®¶æè¿°çš„å®Œå…¨ä¸€è‡´ï¼Œéå¸¸æ»¡æ„"
 				]
 	
 	for (i = 1; i <= aLi.length; i++)
 	{
 		aLi[i - 1].index = i;
-		//Êó±êÒÆ¹ıÏÔÊ¾·ÖÊı
+		//é¼ æ ‡ç§»è¿‡æ˜¾ç¤ºåˆ†æ•°
 		aLi[i - 1].onmouseover = function ()
 		{
 			fnPoint(this.index);
 			oP.style.display = "block";
 			oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
-			oP.innerHTML = "<em><b>" + this.index + "</b> ·Ö " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+			oP.innerHTML = "<em><b>" + this.index + "</b> åˆ† " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
 		};
-		//Êó±êÀë¿ªºó»Ö¸´ÉÏ´ÎÆÀ·Ö
+		//é¼ æ ‡ç¦»å¼€åæ¢å¤ä¸Šæ¬¡è¯„åˆ†
 		aLi[i - 1].onmouseout = function ()
 		{
 			fnPoint();
 			oP.style.display = "none"
 		};
-		//µã»÷ºó½øĞĞÆÀ·Ö´¦Àí
+		//ç‚¹å‡»åè¿›è¡Œè¯„åˆ†å¤„ç†
 		aLi[i - 1].onclick = function ()
 		{
 			iStar = this.index;
 			oP.style.display = "none";
-			oSpan.innerHTML = "<strong>" + (this.index) + " ·Ö</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
+			oSpan.innerHTML = "<strong>" + (this.index) + " åˆ†</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
 		}
 	}
-	//ÆÀ·Ö
+	//è¯„åˆ†
 	function fnPoint(iArg)
 	{
 		iScore = iArg || iStar;
@@ -68,7 +68,7 @@ window.onload = function ()
 </head>
 <body>
 <div id="star">
-    <span>µã»÷ĞÇĞÇ¾ÍÄÜ´ò·Ö</span>
+    <span>ç‚¹å‡»æ˜Ÿæ˜Ÿå°±èƒ½æ‰“åˆ†</span>
     <ul>
         <li><a href="javascript:;">14</a></li>
         <li><a href="javascript:;">24</a></li>
