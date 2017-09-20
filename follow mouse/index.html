@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-<meta charset="gbk" />
-<title>¸úËæÊó±êÒÆ¶¯´óÍ¼</title>
+<meta charset="utf-8"/>
+<title>è·Ÿéšé¼ æ ‡ç§»åŠ¨å¤§å›¾</title>
 <style type="text/css">
 html,body{overflow:hidden;}
 body,div,ul,li{margin:0;padding:0;}
@@ -23,31 +23,31 @@ window.onload = function ()
 	for (i = 0; i < aLi.length; i++)
 	{
 		aLi[i].index = i;
-		//Êó±ê»®¹ı, Ô¤¼ÓÔØÍ¼Æ¬²åÈëÈİÆ÷²¢ÏÔÊ¾
+		//é¼ æ ‡åˆ’è¿‡, é¢„åŠ è½½å›¾ç‰‡æ’å…¥å®¹å™¨å¹¶æ˜¾ç¤º
 		aLi[i].onmouseover = function ()
 		{       
-                        //Í¼Æ¬Ô¤¼ÓÔØ
+                        //å›¾ç‰‡é¢„åŠ è½½
 			var oImg = document.createElement("img");
 			var img = new Image();			
 			img.src = oImg.src = aLi[this.index].getElementsByTagName("img")[0].src.replace(".jpg","_big.jpg");
-			//²åÈë´óÍ¼Æ¬
+			//æ’å…¥å¤§å›¾ç‰‡
 			oBig.appendChild(oImg);
 			this.className = "active";
-			//ÏÔÊ¾big
+			//æ˜¾ç¤ºbig
 			oBig.style.display = oLoading.style.display = "block";
 			img.complete ? oLoading.style.display = "none" : (oImg.onload = function() {oLoading.style.display = "none";})		
 		};
-		//Êó±êÒÆ¶¯, ´óÍ¼ÈİÆ÷¸úËæÊó±êÒÆ¶¯
+		//é¼ æ ‡ç§»åŠ¨, å¤§å›¾å®¹å™¨è·Ÿéšé¼ æ ‡ç§»åŠ¨
 		aLi[i].onmousemove = function (event)
 		{
 			var event = event || window.event;	
 			var iWidth = document.documentElement.offsetWidth - event.clientX;	
 			oBig.style.top = event.clientY + 20 + "px";
-			//ÉèÖÃbigµÄleftÖµ, Èç¹ûÓÒ²àÏÔÊ¾ÇøÓò²»¹», ´óÍ¼½«ÔÚÊó±ê×ó²àÏÔÊ¾.
+			//è®¾ç½®bigçš„leftå€¼, å¦‚æœå³ä¾§æ˜¾ç¤ºåŒºåŸŸä¸å¤Ÿ, å¤§å›¾å°†åœ¨é¼ æ ‡å·¦ä¾§æ˜¾ç¤º.
 			oBig.style.left = (iWidth < oBig.offsetWidth + 10 ? event.clientX - oBig.offsetWidth - 10 : event.clientX + 10) + "px";
 			
 		};
-		//Êó±êÀë¿ª, É¾³ı´óÍ¼²¢Òş²Ø´óÍ¼ÈİÆ÷
+		//é¼ æ ‡ç¦»å¼€, åˆ é™¤å¤§å›¾å¹¶éšè—å¤§å›¾å®¹å™¨
 		aLi[i].onmouseout = function ()
 		{
 			this.className = "";
