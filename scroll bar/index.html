@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="gbk">
-<title>×Ô¶¨Òå¹ö¶¯Ìõ</title>
+<meta charset="utf-8">
+<title>è‡ªå®šä¹‰æ»šåŠ¨æ¡</title>
 <style>
 body,div,ul,li,p{margin:0;padding:0;}
 body{background:#3e3e3e;font:14px/1.5 \5fae\8f6f\96c5\9ed1;}
@@ -52,10 +52,10 @@ window.onload = function ()
 	var disX = 0;
 	var i = 0;
 	
-	//Í¼Æ¬ÁĞ±íÈİÆ÷¶¯Ì¬ÉèÖÃ¿í¶È
+	//å›¾ç‰‡åˆ—è¡¨å®¹å™¨åŠ¨æ€è®¾ç½®å®½åº¦
 	oUl.style.width = (aLi[0].offsetWidth + iMarginRight) * aLi.length + "px";
 	
-	//ÍÏ¶¯¹ö¶¯Ìõ
+	//æ‹–åŠ¨æ»šåŠ¨æ¡
 	oBar.onmousedown = function (event)
 	{
 		var event = event || window.event;
@@ -79,13 +79,13 @@ window.onload = function ()
 		};
 		return false
 	};
-	//×èÖ¹¹ö¶¯Ìõµã»÷ÊÂ¼şÃ°Åİ
+	//é˜»æ­¢æ»šåŠ¨æ¡ç‚¹å‡»äº‹ä»¶å†’æ³¡
 	oBar.onclick = function (event)
 	{
 		(event || window.event).cancelBubble = true
 	};
 
-	//¹ö¶¯Ìõ×óÓÒ°´Å¥Êó±êÒÆÈë¼°¼üÅÌ×óÓÒ¼ü°´ÏÂÊÂ¼ş
+	//æ»šåŠ¨æ¡å·¦å³æŒ‰é’®é¼ æ ‡ç§»å…¥åŠé”®ç›˜å·¦å³é”®æŒ‰ä¸‹äº‹ä»¶
 	oBarL.onmouseover = oBarR.onmouseover = document.onkeydown = function (event)
 	{
 		clearInterval(timer);
@@ -104,20 +104,20 @@ window.onload = function ()
 			togetherMove(getStyle(oBar, "left") + iSpeed, 1)	
 		}, 30)
 	};
-	//¹ö¶¯Ìõ×óÓÒ°´Å¥Êó±êÒÆ¿ª¼°¼üÅÌ×óÓÒ¼üÌ§ÆğÊÂ¼ş
+	//æ»šåŠ¨æ¡å·¦å³æŒ‰é’®é¼ æ ‡ç§»å¼€åŠé”®ç›˜å·¦å³é”®æŠ¬èµ·äº‹ä»¶
 	oBarL.onmouseout = oBarR.onmouseout = document.onkeyup = function ()
 	{
 		clearInterval(timer)	
 	};	
 	
-	//¹ö¶¯Ìõ¿ÉÒÆ¶¯ÇøÓòµã»÷ÊÂ¼ş
+	//æ»šåŠ¨æ¡å¯ç§»åŠ¨åŒºåŸŸç‚¹å‡»äº‹ä»¶
 	oBarM.onclick = function (event)
 	{
 		var iTarget = (event || window.event).clientX - oBox.offsetLeft - this.offsetLeft - oBar.offsetWidth / 2;
 		togetherMove(iTarget)
 	};
 	
-	//Êó±ê¹öÂÖÊÂ¼ş
+	//é¼ æ ‡æ»šè½®äº‹ä»¶
 	oBox.onmouseover = function (event)
 	{
 		event = event || window.event;		
@@ -131,7 +131,7 @@ window.onload = function ()
 		addHandler(this, "DOMMouseScroll", mouseWheel);
 	};	
 	
-	//Í¼Æ¬ÁĞ±íºÍÁ÷¶¯ÌõÍ¬Ê±ÒÆ¶¯
+	//å›¾ç‰‡åˆ—è¡¨å’ŒæµåŠ¨æ¡åŒæ—¶ç§»åŠ¨
 	function togetherMove(iTarget, buffer)
 	{
 		if (iTarget <= 0)
@@ -149,7 +149,7 @@ window.onload = function ()
 		startMove(oBar, iTarget, function () {isStop()}, buffer)
 	}
 	
-	//ÅĞ¶Ï¹ö¶¯ÌõÊÇ·ñµ½´ï±ß½ç
+	//åˆ¤æ–­æ»šåŠ¨æ¡æ˜¯å¦åˆ°è¾¾è¾¹ç•Œ
 	function isStop()
 	{
 		oBarL.className = "barL";
@@ -218,13 +218,13 @@ function doMove(obj, iTarget, fnEnd, buffer)
 </div>
 <!--/box-->
 <dl id="desc">
-    <dt>¹¦ÄÜËµÃ÷£º</dt>
-    <dd>¢Ù ÍÏ¶¯¹ö¶¯Ìõ£¬Í¼Æ¬ÁĞ±í»º³å»¬¶¯ÖÁÄ¿±êµã£»</dd>
-    <dd>¢Ú ¹ö¶¯ÌõÁ½¶ËÊó±êÒÆÈë×Ô¶¯»¬¶¯£»</dd>
-    <dd>¢Û ¹ö¶¯Ìõ»¬¶¯µ½Á½¶Ë×Ô¶¯¸ü»»ÎªÍ£Ö¹±êÊ¶£»</dd>
-    <dd>¢Ü µã»÷¹ö¶¯ÌõºÚÉ«±³¾°Çø£¬¹ö¶¯Ìõ¼°Í¼Æ¬ÁĞ±í»º³å»¬¶¯ÖÁÄ¿±êµã£»</dd>
-    <dd>¢İ Ö§³Ö¼üÅÌ×óÓÒ¼ü£»</dd>
-    <dd>¢Ş Ö§³ÖÊó±ê¹öÂÖ¡£</dd>
+    <dt>åŠŸèƒ½è¯´æ˜ï¼š</dt>
+    <dd>â‘  æ‹–åŠ¨æ»šåŠ¨æ¡ï¼Œå›¾ç‰‡åˆ—è¡¨ç¼“å†²æ»‘åŠ¨è‡³ç›®æ ‡ç‚¹ï¼›</dd>
+    <dd>â‘¡ æ»šåŠ¨æ¡ä¸¤ç«¯é¼ æ ‡ç§»å…¥è‡ªåŠ¨æ»‘åŠ¨ï¼›</dd>
+    <dd>â‘¢ æ»šåŠ¨æ¡æ»‘åŠ¨åˆ°ä¸¤ç«¯è‡ªåŠ¨æ›´æ¢ä¸ºåœæ­¢æ ‡è¯†ï¼›</dd>
+    <dd>â‘£ ç‚¹å‡»æ»šåŠ¨æ¡é»‘è‰²èƒŒæ™¯åŒºï¼Œæ»šåŠ¨æ¡åŠå›¾ç‰‡åˆ—è¡¨ç¼“å†²æ»‘åŠ¨è‡³ç›®æ ‡ç‚¹ï¼›</dd>
+    <dd>â‘¤ æ”¯æŒé”®ç›˜å·¦å³é”®ï¼›</dd>
+    <dd>â‘¥ æ”¯æŒé¼ æ ‡æ»šè½®ã€‚</dd>
 </dl>
 </body>
 </html>
