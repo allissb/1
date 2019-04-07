@@ -38,18 +38,18 @@ h2 {font-size:46px; font-weight:normal;}
 /* block-workEXP */
 #block-workEXP {height:auto; width:100%; background-color:#26B1B6; color:#e7e7e7;padding:160px 0}
 #block-workEXP .work-title {width:300px; margin:0 auto; text-align:center;}
-#block-workEXP .workEXP-main {height:auto; width:auto; margin:100px 0 0 60px;}
-#block-workEXP .timebox {margin-left:74px; font-size:29px;}
+#block-workEXP .workEXP-main {height:auto; width:auto; margin:100px 0 0 5px;}
+#block-workEXP .timebox {font-size:29px;}
 #block-workEXP .timebox li{display:inline-block; margin-top:5px;}
-#block-workEXP .time1 {margin-left:110px}
+#block-workEXP .time1 {margin-left:55px}
 #block-workEXP .timeline {background:red;height:27px; width:868px; margin-left:42px; background:url(../img/timeline.png) no-repeat center;}
-#block-workEXP .workbox  {margin-left:99px;}
-#block-workEXP .workbox li{display:inline-block; width:310px; vertical-align: top;}
+#block-workEXP .workbox  {}
+#block-workEXP .workbox li{display:inline-block; width:280px; vertical-align: top;}
 #block-workEXP .workbox li label{display:block;}
 #block-workEXP .workbox .work-place {font-size:26px; font-weight:bold}
 #block-workEXP .workbox .work-position {font-size:20px;}
 #block-workEXP .workbox .work-do {margin-top:10px; font-size:16px;}
-#block-workEXP .workbox .work-intro2{margin-left:40px;}
+#block-workEXP .workbox .work-intro2{}
 /*block-prjEXP*/
 #block-prjEXP {padding:50px 0 200px; width:100%; background-color:#129DE7; color:#FFFFFF;}
 #block-prjEXP .prjEXP-title {width:300px; margin:30px auto; text-align:center;}
