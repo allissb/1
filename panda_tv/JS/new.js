@@ -1,6 +1,8 @@
-var i_fix=document.getElementsByClassName("breathe");
+﻿var i_fix=document.getElementsByClassName("breathe");
 var dotimer = uptimer = null;
 var speed=-2;
+
+var time=0;
 var i_stars_li=document.getElementsByClassName("stars-lists")[0].getElementsByClassName("stars-list");
 var i_stars_move=document.getElementsByClassName("index-pandastars")[0].getElementsByClassName("bw")[0].getElementsByClassName("stars")[0].getElementsByClassName("stars-lists")[0]
 var i_arrow=document.getElementsByClassName("index-pandastars")[0].getElementsByClassName("bw")[0].getElementsByClassName("stars")[0].getElementsByClassName("arrow");
@@ -46,83 +48,53 @@ i_arrow[1].onclick=function(){
 
 var li_af=$(".index-shuffer .stars .bx-viewport ul:eq(0) li:gt(7)");
 var li_be=$(".index-shuffer .stars .bx-viewport ul:eq(0) li:lt(4)");
-var stars_ul=$(".index-shuffer .stars .bx-viewport ul:eq(0)");
-stars_ul.prepend(li_af.clone(true));
-stars_ul.append(li_be.clone(true));
-
-
 var a=$(".index-shuffer .stars .bx-viewport ul:eq(0)");
+a.prepend(li_af.clone(true));
+a.append(li_be.clone(true));
+
 var b=$(".index-shuffer .arrows a")
 
-b.eq(1).on("click",function(){
-	var ul_tra=parseInt(a.css("left").slice(0,-2))-980;
-	a.css("left",ul_tra+"px");
-	a.css("transition-duration","0.4s")
-	if(a.css("left")=="-1960px"){
-		setTimeout(function(){
-			bbb()
-		},500)
-	}
-})
-b.eq(0).on("click",function(){
+
+b.eq(1).click(debounce(bb,400));
+b.eq(0).click(debounce(aa,400));
+
+function debounce(fn, wait) {
+var timer = null;            
+    return function() { 
+    	fn()
+    	var _this=this;
+    	$(this).off("click");
+        if (!timer) {
+        	timer = setTimeout(function() {
+        		$(_this).click(debounce(fn,wait));
+                timer = null;                    
+            }, wait);                
+        }            
+    }
+}
+
+function aa(){
 	var ul_tra=parseInt(a.css("left").slice(0,-2))+980;
 	a.css("left",ul_tra+"px")
 	a.css("transition-duration","0.4s")
 	if(a.css("left")=="-980px"){
 		setTimeout(function(){
-			aaa()
-		},500)
+			a.css("transition-duration","0")
+			a.css("left","-2940px")
+			},400)
 	}
-})
-
-function aaa(){
-	a.css("transition-duration","0")
-	a.css("left","-2940px")
 }
-function bbb(){
-	a.css("transition-duration","0")
-	a.css("left","0px")
-}
-
-
-
-
-
-
-/*var sec_stars=document.getElementsByClassName("index-shuffer")[0].getElementsByClassName("stars")[0].getElementsByClassName("bx-viewport")[0].getElementsByTagName("ul")[0];
-var arr_stars=document.getElementsByClassName("index-shuffer")[0].getElementsByClassName("stars")[0].getElementsByClassName("arrows")[0].getElementsByTagName("a");
-arr_stars[0].onclick=function()
-{
-	if(sec_stars.style.transform=="translateX(-3920px)"){
-	sec_stars.style.transform="translateX(-2940px)";
-}else if(sec_stars.style.transform=="translateX(-2940px)"){
-	sec_stars.style.transition="all .4s ease-in";
-	sec_stars.style.transform="translateX(-1960px)";
-}else if(sec_stars.style.transform=="translateX(-1960px)"){
-sec_stars.style.transform="translateX(-980px)";
-}else if(sec_stars.style.transform=="translateX(-980px)"){
-sec_stars.style.transform="translateX(0px)";
-setTimeout(function(){aaaa()},500)
-
-}
-}
-arr_stars[1].onclick=function(){
-	if(sec_stars.style.transform=="translateX(-980px)"){
-	sec_stars.style.transition="all .4s ease-in";
-	sec_stars.style.transform="translateX(-1960px)";
-}else if(sec_stars.style.transform=="translateX(-1960px)"){
-	sec_stars.style.transform="translateX(-2940px)";
-}else if(sec_stars.style.transform=="translateX(-2940px)"){
-sec_stars.style.transform="translateX(-3920px)";
-sec_stars.style.transition="all 0s ease-in";
-sec_stars.style.transform="translateX(-980px)";
-}else if(sec_stars.style.transform=="translateX(0px)"){
-sec_stars.style.transform="translateX(-980px)";
-}
+function bb(){
+	var ul_tra=parseInt(a.css("left").slice(0,-2))-980;
+	a.css("left",ul_tra+"px");
+	a.css("transition-duration","0.4s")
+	if(a.css("left")=="-2940px"){
+		setTimeout(function(){
+			a.css("transition-duration","0")
+			a.css("left","-980px")
+		},400)
+	}
 }
 
-function aaaa(){
-	sec_stars.style.transition="all 0s ease-in";
-	sec_stars.style.transform="translateX(-2940px)";
-}
-*/
+
+
