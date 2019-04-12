@@ -1,4 +1,4 @@
-//兼容写法
+﻿//兼容写法
 (function() {
     var lastTime = 0;
     var vendors = ['webkit', 'moz'];
@@ -82,6 +82,7 @@
   var barrageColorArray = [
     '#0099CC','#333333', '#009966','#FFFF66','#9933FF','#FFFF99','#CCCCFF','#CC9933','#FFFF66'
   ];
+  var arrnum=[];
   var barrageTipWidth = 50; //提示语的长度
   var barrageBoxWrap = document.querySelector('.barrage-container-wrap');;
   var barrageBox = document.querySelector('.barrage-container');
@@ -91,7 +92,7 @@
   //容器的宽高度
   var barrageWidth =~~barrageBoxWrap.offsetWidth;
   var barrageHeight = ~~barrageBoxWrap.offsetHeight;
- 
+
   //发送
   function sendMsg(){
     var inputValue = inputBox.value;
@@ -123,9 +124,9 @@
  
     barrageOffsetLeft =getRandom(barrageWidth, barrageWidth*2);
     barrageOffsetLeft = isSendMsg ? barrageWidth : barrageOffsetLeft
-    barrageOffsetTop = getRandom(10, barrageHeight-10);
+    barrageOffsetTop = isSendMsg ?20*Math.floor(Math.random()*24):(function(){var n=20*Math.floor(Math.random()*24);while (arrnum.indexOf(n)!=-1){n=20*Math.floor(Math.random()*24);}arrnum.push(n);return n;})()
     barrageColor = barrageColorArray[Math.floor(Math.random()*(barrageColorArray.length))];
- 
+
     //执行初始化滚动
     initBarrage.call(divNode,{
       left : barrageOffsetLeft,
