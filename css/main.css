@@ -38,7 +38,7 @@ h2 {font-size:46px; font-weight:normal;}
 /* block-workEXP */
 #block-workEXP {height:auto; width:100%; background-color:#26B1B6; color:#e7e7e7;padding:160px 0}
 #block-workEXP .work-title {width:300px; margin:0 auto; text-align:center;}
-#block-workEXP .workEXP-main {height:auto; width:auto; margin:100px 0 0 5px;}
+#block-workEXP .workEXP-main {height:auto; width:auto; margin:100px 0 0 5px;text-align:center;}
 #block-workEXP .timebox {font-size:29px;}
 #block-workEXP .timebox li{display:inline-block; margin-top:5px;}
 #block-workEXP .time1 {margin-left:55px}
