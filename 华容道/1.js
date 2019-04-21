@@ -122,8 +122,8 @@
 		}
 	}
 	function ccjc(a,b){
-		var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop);
-		var t_b=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft);
+		var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop)&&(sp[0].offsetTop+sp[1].offsetTop-a.offsetTop-a.offsetTop==80);
+		var t_b=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft)&&(sp[0].offsetLeft+sp[1].offsetLeft-a.offsetLeft-a.offsetLeft==80);
 		if(t_a||t_b){
 			if(t_a){
 			if(a.offsetLeft-b.offsetLeft==80){
@@ -159,7 +159,7 @@ function xbjc(a,b){
 	}
 }
 function gyjc(a,b){
-	var t_a=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft);
+	var t_a=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft)&&(Math.abs(a.offsetTop-b.offsetTop)==80)&&(sp[0].offsetLeft+sp[1].offsetLeft-a.offsetLeft-a.offsetLeft==80);
 	var t_b=(a.offsetTop==b.offsetTop)&&(a.offsetLeft-b.offsetLeft==80);
 	var t_c=(a.offsetTop==b.offsetTop)&&(a.offsetLeft-b.offsetLeft==-160);
 	if(t_a||t_b||t_c){
@@ -179,7 +179,7 @@ function gyjc(a,b){
 	}
 }
 function sxjc(a,b){
-	var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop);
+	var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop)&&(Math.abs(a.offsetLeft-b.offsetLeft)==80)&&(sp[0].offsetTop+sp[1].offsetTop-a.offsetTop-a.offsetTop==80);
 	var t_b=(a.offsetLeft==b.offsetLeft)&&(a.offsetTop-b.offsetTop==80);
 	var t_c=(a.offsetLeft==b.offsetLeft)&&(a.offsetTop-b.offsetTop==-160);
 	if(t_a||t_b||t_c){
