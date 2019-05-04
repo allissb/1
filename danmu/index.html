@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8" />
-    <head>
-    	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-    	<link rel="stylesheet" type="text/css" href="css/1.css"/>
+	<meta charset="UTF-8" />
 
-    </head>
-    <body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/1.css" />
+	</head>
 
+	<body>
+		<div class="box" id="box">
+			<div class="barrage-container-wrap clearfix">
+				<div class="barrage-container" @click.self="stop">
+					<div class="barrage-item" v-for="item in barrage">
+						{{item.text}}
+					</div>
+				</div>
+			</div>
+			<div class="send-wrap">
+				<input type="text" class="input" placeholder="弹幕发送" v-model='datet' ref='sen' @keydown.enter="send">
+				<span class="send-btn" @click="send">发送</span>
+			</div>
+		</div>
+		<script src="../vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../TweenMax.min.js"></script>
+		<script src="js/1.js"></script>
+	</body>
 
-<div class="box">
-   <div class="barrage-container-wrap clearfix">
-    <div class="barrage-container">
-    </div> 
-  </div>
-  <div class="send-wrap">
-    <input type="text" class="input" placeholder="弹幕发送">
-    <span class="send-btn">发送</span>
-  </div> 
-</div>
-
-    	  	<script src="js/jquery-2.1.0.js"></script>
-    	<script src="js/1.js"></script>
-
-    </body>
 </html>
