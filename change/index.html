@@ -15,88 +15,69 @@ body{background:#000;text-align:center;font:12px/20px Arial;}
 #box .count li.current{color:#fff;opacity:1;filter:alpha(opacity=100);font-weight:700;background:#f60;}
 #tmp{width:100px;height:100px;background:red;position:absolute;}
 </style>
-<script type="text/javascript">
-window.onload = function ()
-{
-	var oBox = document.getElementById("box");
-	var aUl = document.getElementsByTagName("ul");
-	var aImg = aUl[0].getElementsByTagName("li");
-	var aNum = aUl[1].getElementsByTagName("li");
-	var timer = play = null;
-	var i = index = 0;	
-	
-	//切换按钮
-	for (i = 0; i < aNum.length; i++)
-	{
-		aNum[i].index = i;
-		aNum[i].onmouseover = function ()
-		{
-			show(this.index)
-		}
-	}
-	
-	oBox.onmouseover = function ()
-	{
-		clearInterval(play)	
-	};
-	oBox.onmouseout = function ()
-	{
-		autoPlay()
-	};	
-	
-	//自动播放函数
-	function autoPlay ()
-	{
-		play = setInterval(function () {
-			index++;
-			index >= aImg.length && (index = 0);
-			show(index);		
-		},2000);	
-	}
-	autoPlay();//应用
-	
-	//图片切换, 淡入淡出效果
-	function show (a)
-	{
-		index = a;
-		var alpha = 0;
-		for (i = 0; i < aNum.length; i++)aNum[i].className = "";
-		aNum[index].className = "current";
-		clearInterval(timer);			
-		
-		for (i = 0; i < aImg.length; i++)
-		{
-			aImg[i].style.opacity = 0;
-			aImg[i].style.filter = "alpha(opacity=0)";	
-		}
-		
-		timer = setInterval(function () {
-			alpha += 2;
-			alpha > 100 && (alpha =100);
-			aImg[index].style.opacity = alpha / 100;
-			aImg[index].style.filter = "alpha(opacity = " + alpha + ")";
-			alpha == 100 && clearInterval(timer)
-		},20);
-	}
-};
-</script>
 </head>
 <body>
 <div id="box">
-    <ul class="list">
-        <li class="current"><img src="img/01.jpg" width="490" height="170" /></li>
-        <li><img src="img/02.jpg" width="490" height="170" /></li>
-        <li><img src="img/03.jpg" width="490" height="170" /></li>
-        <li><img src="img/04.jpg" width="490" height="170" /></li>
-        <li><img src="img/05.jpg" width="490" height="170" /></li>
+    <ul class="list" @mouseover="stop" @mouseout="autoplay">
+        <li v-for="it in list" :style="it.sty"><img :src="it.src" width="490" height="170" />{{it.sty}}</li>
     </ul>
     <ul class="count">
-        <li class="current">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li v-for="it in list" :class={current:it.keke} @mouseover='cli(it.id-1)'>{{it.id}}</li>
     </ul>
 </div>
+<script src="../vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+new Vue({
+	el: '#box',
+	data: {
+		currentindex:0,
+		list:[
+		{sty:{opacity:0},src:'img/01.jpg',id:1,keke:false},
+		{sty:{opacity:0},src:'img/02.jpg',id:2,keke:false},
+		{sty:{opacity:0},src:'img/03.jpg',id:3,keke:false},
+		{sty:{opacity:0},src:'img/04.jpg',id:4,keke:false},
+		{sty:{opacity:0},src:'img/05.jpg',id:5,keke:false},
+		],
+		timer:null,
+		play:null,
+	},
+	methods:{
+		cli:function(a){
+			clearInterval(this.play);
+			this.currentindex=a;
+			this.show(a)
+		},
+		stop:function(){
+			clearInterval(this.play)
+		},
+		show:function(a){
+			var _this=this;
+			for (i = 0; i < this.list.length; i++)this.list[i].keke=false;
+			this.list[a].keke=true;
+			clearInterval(this.timer);
+			for (i = 0; i < this.list.length; i++)this.list[i].sty.opacity = 0;	
+			_this.timer = new TweenMax(_this.$data.list[a].sty, 0.3, {
+				opacity:1,
+			});
+		},
+		autoplay:function(){
+			var timer = play = null;
+			var i = 0;	
+			var _this=this;
+			this.play = setInterval(function () {
+			_this.currentindex++;
+			_this.currentindex >= _this.list.length && (_this.currentindex = 0);
+			_this.show(_this.currentindex)
+		},2000);	
+		},
+	},
+	mounted: function() {
+		this.list[0].sty.opacity=1;
+		this.list[0].keke = true;
+		this.autoplay()
+	}
+})
+</script>
 </body>
 </html>
