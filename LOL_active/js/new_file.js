@@ -1,20 +1,57 @@
-var j_nav=$("#J_nav");
-var k_nav=$("#J_subNav")
-j_nav.mouseover(function(){
-	k_nav.css("display","block")
+new Vue({
+	el:"#header",
+	data:{
+		main:[
+		{'name':'游戏资料','value':'GAME INFO'},
+		{'name':'商城/合作','value':'STORE'},
+		{'name':'用户互动','value':'COMMUNITY'},
+		{'name':'赛事中心','value':'EVENTS'},
+		{'name':'自助系统','value':'SYSTEM'}
+		],
+		inner:[
+		[{'name':'新手指引','i':'0'},{'name':'资料库','i':'1'},{'name':'攻略中心','i':'0'},{'name':'视频中心','i':'0'},{'name':'开发者基地','i':'0'},{'name':'海克斯战利品库','i':'0'},{'name':'宇宙官网','i':'0'}],
+		[{'name':'点券充值','i':'0'},{'name':'道聚城','i':'1'},{'name':'周边商城','i':'0'},{'name':'LOL桌游','i':'0'},{'name':'LOL信用卡','i':'0'},{'name':'网吧特权','i':'0'}],
+		[{'name':'在线客服','i':'0'},{'name':'官方社区','i':'1'},{'name':'官方论坛','i':'0'},{'name':'官方微信','i':'1'},{'name':'官方微博','i':'0'},{'name':'玩家创作','i':'0'},{'name':'玩家服务','i':'0'}],
+		[{'name':'LPL职业联赛','i':'0'},{'name':'资料库','i':'1'},{'name':'LDL发展联赛','i':'0'},{'name':'集中冠军赛','i':'0'},{'name':'德玛西亚杯','i':'0'},{'name':'全球高校冠军杯','i':'0'},{'name':'城市英雄争霸赛','i':'0'}],
+		[{'name':'专区系统','i':'0'},{'name':'封号查询','i':'1'},{'name':'体验服申请','i':'0'},{'name':'回放系统','i':'0'},{'name':'开发者基地','i':'1'},{'name':'服务状态查询','i':'0'},{'name':'秩序殿堂','i':'0'},{'name':'峡谷之巅','i':'0'}],
+		]
+	},
+	methods:{
+		show:function(){
+			this.$refs.sub.style.display="block";
+		},
+		fli:function(){
+			this.$refs.sub.style.display="none";
+		},
+		show2:function(){
+			this.$refs.userDrop.style.display="block";
+		},
+		fli2:function(){
+			this.$refs.userDrop.style.display="none";
+		},
+		oshow:function(){
+			this.$refs.J_search.style.display="block";
+		},
+		dis:function(){
+			this.$refs.J_search.style.display="none";
+		}
+	}
 })
-j_nav.mouseout(function(){
-	k_nav.css("display","none")
-})
-$("#J_topUser").mouseover(function(){
-	$("#J_userDrop").css("display","block")
-})
-$("#J_topUser").mouseout(function(){
-	$("#J_userDrop").css("display","none")
-})
-$("#J_searchClick").click(function(){
-	$("#J_search").css("display","block")
-})
-$("#top-clo").click(function(){
-	$("#J_search").css("display","none")
+
+new Vue({
+	el:"#gfooter",
+	data:{
+		keke:2,
+		linka:[
+		{'name':'腾讯互动娱乐','sp':'1'},
+		{'name':'服务条款','sp':'1'},
+		{'name':'腾讯游戏隐私保护指引','sp':'1'},
+		{'name':'腾讯游戏招聘','sp':'1'},
+		{'name':'腾讯游戏客服','sp':'1'},
+		{'name':'游戏地图','sp':'1'},
+		{'name':'商务合作','sp':'1'},
+		{'name':'腾讯网','sp':'1'},
+		{'name':'网站导航','sp':'0'}
+		]
+	}
 })
