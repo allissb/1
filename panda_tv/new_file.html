@@ -22,23 +22,8 @@
 						<div class="ph-nav_shadow" style="left: 0px; width: 62px;">
 						</div>
 						<ul class="ph-nav_first">
-							<li class="ph-nav_item ph-nav_item--current">
-								<a href="javascript:void(0);">首页</a>
-							</li>
-							<li class="ph-nav_item">
-								<a href="javascript:void(0);">全部</a>
-							</li>
-							<li class="ph-nav_item">
-								<a href="javascript:void(0);">分类</a>
-							</li>
-							<li class="ph-nav_item">
-								<a href="javascript:void(0);">熊猫精品</a>
-							</li>
-							<li class="ph-nav_item">
-								<a href="javascript:void(0);">iPanda</a>
-							</li>
-							<li class="ph-nav_item">
-								<a href="javascript:void(0);">熊猫游戏</a>
+							<li class="ph-nav_item" v-for="item in nav_first">
+								<a href="javascript:void(0);">{{item}}</a>
 							</li>
 						</ul>
 					</div>
@@ -78,32 +63,17 @@
 						
 					</div>
 				</div>
-				<div class="small-pic-container">
+				<div class="small-pic-container" id="small">
 					<div class="small-pic-box"></div>
-					<a href="javascript:void(0)">
-						<img src="img/wrap/right/29dc740285c75c514e2caadea13dfeba.webp" class="slider-small-img"/>
-					</a>
-					<a href="javascript:void(0)">
-						<img src="img/wrap/right/58fddbf3b377424b45ec928056a8b580.webp" class="slider-small-img"/>
-					</a>
-					<a href="javascript:void(0)">
-						<img src="img/wrap/right/d14363d8ae0eae10d462a1bfe34f7223.webp" class="slider-small-img"/>
-					</a> 
-					<a href="javascript:void(0)">
-						<img src="img/wrap/right/51c33611e011c95d4438758c4bfe4d50.webp" class="slider-small-img"/>
-					</a>
-					<a href="javascript:void(0)">
-						<img src="img/wrap/right/270ac643d388b855719761f0bc165283.webp" class="slider-small-img"/>
-					</a>
-					<a href="javascript:void(0)">
-						<img src="img/wrap/right/beec09f880cc611ddbb889265066f472.webp" class="slider-small-img"/>
+					<a href="javascript:void(0)" v-for="item in nav_first">
+						<img :src="item" class="slider-small-img"/>
 					</a>
 				</div>
 			</div>
 		</div>
 
 <!--second-->
-		<div class="bw index-suggestion">
+		<div class="bw index-suggestion" id="sec">
 			<div class="suggestion-list suggestion-jingji">
 				<div class="title">
 					<span>
@@ -111,23 +81,9 @@
 					</span>
 				</div>
 				<ul class="figrues-list clearfix">
-					<li class="list-item">
+					<li class="list-item" v-for="item in jiji">
 						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/1.png"/>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/2.png"/>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/3.png"/>
-						</a>
-					</li><li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/4.png"/>
+							<img :src="item"/>
 						</a>
 					</li>
 				</ul>
@@ -139,23 +95,9 @@
 					</span>
 				</div>
 				<ul class="figrues-list clearfix">
-					<li class="list-item">
+					<li class="list-item" v-for="item in zjdj">
 						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/5.png"/>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/6.png"/>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/7.png"/>
-						</a>
-					</li><li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/8.png"/>
+							<img :src="item"/>
 						</a>
 					</li>
 				</ul>
@@ -167,23 +109,9 @@
 					</span>
 				</div>
 				<ul class="figrues-list clearfix">
-					<li class="list-item">
+					<li class="list-item" v-for="item in yllm">
 						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/9.png"/>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/10.png"/>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/11.png"/>
-						</a>
-					</li><li class="list-item">
-						<a href="javascript:void(0);">
-							<img src="img/wrap/firgue-list/12.png"/>
+							<img :src="item"/>
 						</a>
 					</li>
 				</ul>
@@ -191,7 +119,7 @@
 		</div>
 		
 <!--three-->
-<div class="bw index-recommend clearfix">
+<div class="bw index-recommend clearfix" id="thr">
 	<div class="index-recommend-pic clearfix">
 		<div class="index-block-title">
 			<span class="tit1">
@@ -273,14 +201,8 @@
 				</div>
 			</a>
 			<ul class="links">
-				<li>
-					<a href="javascript:void(0);">[公告]保障自身权益，警惕黑产！</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);">[活动]观风使志愿者团队第一期</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);">[活动]手游网游专区幸运礼物上线</a>
+				<li v-for="item in links">
+					<a href="javascript:void(0);">{{item}}</a>
 				</li>
 			</ul>
 		</div>
@@ -299,80 +221,14 @@
 		</div>
 		<div class="rank-list clearfix">
 			<ul class="rank-list clearfix">
-				<li class="rank rnak-1">
+				<li class="rank" v-for="item in rank":class="item.rank">
 					<div class="avt">
 						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/1.webp"style="display: inline;"/>
+							<img class="thumb-img-lazy" :src="item.src"/>
 						</span>
-						<div class="crown-rank"></div>
+						<div class="crown-rank" v-if="item.id<4"></div>
 					</div>
-					<p class="name"title="鱼鱼666666">鱼鱼666666</p>
-				</li>
-				<li class="rank rnak-2">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/2.webp"/>
-						</span>
-						<div class="crown-rank"></div>
-					</div>
-					<p class="name"title="叔叔别问我了我约">叔叔别问我了我约</p>
-				</li>
-				<li class="rank rnak-3">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/3.webp"/>
-						</span>
-						<div class="crown-rank"></div>
-					</div>
-					<p class="name"title="天地佛爷">天地佛爷</p>
-				</li>
-				<li class="rank rnak-4">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/4.webp"/>
-						</span>
-					</div>
-					<p class="name"title="逆风_舞姬">逆风_舞姬</p>
-				</li>
-				<li class="rank rnak-5">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/5.webp"/>
-						</span>
-					</div>
-					<p class="name"title="天线giaogiao">天线giaogiao</p>
-				</li>
-				<li class="rank rnak-6">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/6.webp"/>
-						</span>
-					</div>
-					<p class="name"title="义乌拳头">义乌拳头</p>
-				</li>
-				<li class="rank rnak-7">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/7.webp"/>
-						</span>
-					</div>
-					<p class="name"title="心情712956777">心情712956777</p>
-				</li>
-				<li class="rank rnak-8">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/8.webp"/>
-						</span>
-					</div>
-					<p class="name"title="iG_VK">iG_VK</p>
-				</li>
-				<li class="rank rnak-9">
-					<div class="avt">
-						<span>
-							<img class="thumb-img-lazy" src="img/wrap/2/rank/9.webp"/>
-						</span>
-					</div>
-					<p class="name"title="黑马精品万炮">黑马精品万炮</p>
+					<p class="name":title="item.name">{{item.name}}</p>
 				</li>
 			</ul>
 		</div>
@@ -380,7 +236,7 @@
 </div>
 
 <!--four-->
-<div class="bw index-hotlive">
+<div class="bw index-hotlive" id="four">
 	<div class="index-block-title">
 		<span class="tit1">
 			今日
@@ -397,201 +253,24 @@
 		</div>
 	</div>
 	<ul class="figrues-list clearfix">
-		<li class="list-item">
+		<li class="list-item" v-for="item in list">
 		<a href="javascript:void(0);">
 		<div class="pd-thumb">
 			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/1.webp"/>
+				<img class="thumb-img thumb-img-lazy" :src="item.src"/>
 			</div>
 			<div class="thumb-layer">
-				
 			</div>
 			<div class="play-btn">
-				
 			</div>
-			<div class="thumb-title"title="熊猫正在慢慢的消逝 陪伴是最好的报答">
-				熊猫正在慢慢的消逝 陪伴是最好的报答
+			<div class="thumb-title" :title="item.title">
+				{{item.title}}
 			</div>
 		</div>
 		<div class="thumb-info">
 			<div class="thumb-list">
-				<span class="thumb-nickname">strong丶霸狼</span>
-				<span class="thumb-number">16702</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/2.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="【学姐】偶尔会想起我吗❤">
-				【学姐】偶尔会想起我吗❤
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">卿卿学姐</span>
-				<span class="thumb-number">9689</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/3.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="进来聊聊吧。最后一小时熊猫关闭了！答">
-				进来聊聊吧。最后一小时熊猫关闭了！
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">熊猫丶乐鱼阿卡丽</span>
-				<span class="thumb-number">2175</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/4.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="跟你们说个事">
-				跟你们说个事
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">模叫兽</span>
-				<span class="thumb-number">4829</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/5.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="LPL春季赛 VG vs JDG">
-				LPL春季赛 VG vs JDG
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">LPL熊猫官方直播</span>
-				<span class="thumb-number">856311</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/6.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="感谢熊猫，感谢大家">
-				感谢熊猫，感谢大家
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">访谈嘉宾</span>
-				<span class="thumb-number">607</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/7.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="英雄联盟视频大赏">
-				英雄联盟视频大赏
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">英雄联盟活动台</span>
-				<span class="thumb-number">0</span>
-			</div>
-			<div class="thumb-bar"></div>
-		</div>
-		</a>
-		</li>
-		<li class="list-item">
-		<a href="javascript:void(0);">
-		<div class="pd-thumb">
-			<div class="pictures">
-				<img class="thumb-img thumb-img-lazy" src="img/wrap/3/8.webp"/>
-			</div>
-			<div class="thumb-layer">
-				
-			</div>
-			<div class="play-btn">
-				
-			</div>
-			<div class="thumb-title"title="群19099991我不想再失去你们">
-				群19099991我不想再失去你们
-			</div>
-		</div>
-		<div class="thumb-info">
-			<div class="thumb-list">
-				<span class="thumb-nickname">沈子涵</span>
-				<span class="thumb-number">209</span>
+				<span class="thumb-nickname">{{item.name}}</span>
+				<span class="thumb-number">{{item.num}}</span>
 			</div>
 			<div class="thumb-bar"></div>
 		</div>
@@ -602,7 +281,7 @@
 </div>
 
 <!-- five-->
-<div class="index-pandastars">
+<div class="index-pandastars" id="five">
 	<div class="bw">
 		<div class="stars-title">
 		</div>
@@ -610,429 +289,29 @@
 			<div class="stars-wall">
 				<div class="bx-wrapper" style="max-width: 1540px;">
 					<div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 150px;">
-						<ul class="stars-lists clearfix" style="width: 17215%; position: relative; transition:all 1s ease-in;-webkit-transition:all 1s ease-in;-ms-transition:all 1s ease-in;-o-transition:all 1s ease-in;transition:all 1s ease-in; transform: translateX(0px);">
-						<li class="stars-list" style="float: left; list-style: none; position: relative; width: 140px;">
+						<ul class="stars-lists clearfix" style="width: 17215%; position: relative; transition:all 1s ease-in;-webkit-transition:all 1s ease-in;-ms-transition:all 1s ease-in;-o-transition:all 1s ease-in;transition:all 1s ease-in;" :style="active[current]">
+						<li class="stars-list" v-for="item in list" style="float: left; list-style: none; position: relative; width: 140px;">
 						<a href="javascript:void(0);">
 						<div class="pd-stars">
 							<div class="front">
-								<img src="img/wrap/5/1.webp"/>
+								<img :src="item.src"/>
 							</div>
 							<div class="back">
-								<img src="img/wrap/5/1.webp"/>
+								<img :src="item.src"/>
 								<div class="cover">
 								</div>
 								<div class="stars-info">
 									<div class="intro">
-										金曲歌王
+										{{item.title}}
 									</div>
 									<div class="number">
-										639
+										{{item.num}}
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="thumb-title" title="林俊杰">
-							林俊杰
-						</div>
-						</a>
-						</li>
-						<li class="stars-list" style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/2.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/2.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										国民女神
-									</div>
-									<div class="number">
-										0
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="Angelababy">
-							Angelababy
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/3.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/3.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										篮球巨星
-									</div>
-									<div class="number">
-										0
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="孙悦Qtip">
-							孙悦Qtip
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/4.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/4.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										爱你哟仙仙
-									</div>
-									<div class="number">
-										0
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="baby半仙">
-							baby半仙
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/5.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/5.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										脏王之王
-									</div>
-									<div class="number">
-										0
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="王师傅">
-							王师傅
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/6.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/6.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										IG战队中单
-									</div>
-									<div class="number">
-										2344
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="IG.Rookie">
-							IG.Rookie
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/7.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/7.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										IG世界冠军上单
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="Panda丶TheShy">
-							Panda丶TheShy
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/8.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/8.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										世界冠军上单
-									</div>
-									<div class="number">
-										123
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="iG_Duke">
-							iG_Duke
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/9.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/9.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										金牌主持
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="暄哥">
-							暄哥
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/10.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/10.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										最强武器大师
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="贾克虎丶虎神">
-							贾克虎丶虎神
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/11.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/11.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										最美歌姬星妈
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="Igxingsu">
-							Igxingsu
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/12.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/12.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										心大集团
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="苏C皮蛋">
-							苏C皮蛋
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/13.webp"/>
-							</div>
-							<<div class="back">
-								<img src="img/wrap/5/13.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										鼠大王
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="鼠大王">
-							鼠大王
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/14.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/14.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										南枪李锦
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="李锦">
-							李锦
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/15.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/15.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										麦克李
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="JamLee">
-							JamLee
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/16.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/16.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										岛田老叉
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="LaoX2333">
-							LaoX2333
-						</div>
-						</a>
-						</li>
-						<li class="stars-list"style="float: left; list-style: none; position: relative; width: 140px;">
-						<a href="javascript:void(0);">
-						<div class="pd-stars">
-							<div class="front">
-								<img src="img/wrap/5/17.webp"/>
-							</div>
-							<div class="back">
-								<img src="img/wrap/5/17.webp"/>
-								<div class="cover">
-								</div>
-								<div class="stars-info">
-									<div class="intro">
-										百变歌者
-									</div>
-									<div class="number">
-										639
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="thumb-title"title="Mars毒药">
-							Mars毒药
+							{{item.name}}
 						</div>
 						</a>
 						</li>
@@ -1041,10 +320,10 @@
 				</div>
 			</div>
 			<div class="arrows">
-				<div class="arrow arrow-left">
+				<div class="arrow arrow-left" @click="pre" v-if="current!=0">
 					<a href="javascript:void(0);" class="bx-prev disabled"></a>
 				</div>
-				<div class="arrow arrow-right">
+				<div class="arrow arrow-right" @click="nex" v-if="current!=2">
 					<a href="javascript:void(0);" class="bx-next"></a>
 				</div>
 			</div>
@@ -1054,7 +333,7 @@
 
 <!--six-->
 
-<div class="index-shuffer">
+<div class="index-shuffer" id="six">
 	<div class="bw">
 		<div class="shuffer-title">
 			<img src="img/wrap/6/shuffer-title.webp"class="thumb-img-lazy"/>
@@ -1062,163 +341,19 @@
 		<div class="stars">
 			<div class="stars-wall">
 				<div class="wall-layer wall-layer-left">
-					
 				</div>
 				<div class="bx-wrapper" style="max-width: 1715px;">
 					<div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 240px;">
-						<ul class="stars-lists clearfix"style="width:20215%;position: relative;transition:all 1s ease-in;-webkit-transition:all .4s ease-in;-ms-transition:all .4s ease-in;transition:all .4s ease-in; left: -980px;">
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="0">
+						<ul class="stars-lists clearfix"style="width:20215%;position: relative;transition:all 0.4s ease-in;-webkit-transition:all 0.4s ease-in;-ms-transition:all 0.4s ease-in;":style="{left:lef+'px'}">
+							<li class="stars-list" v-for="item in list" style="float: left; list-style: none; position: relative; width: 245px;">
+								<a href="javascript:void(0);" :data-pdt-ele="item.id">
 									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/0.webp"/>
+										<img class="thumb-img thumb-img-lazy" :src="item.src"/>
 										<div class="cover"></div>
 										<div class="shuffer-line"></div>
 										<div class="stars-info">
-											<div class="name">饭岛ash</div>
-											<div class="intro">剧本杀青衣怪谈biubiu</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="1">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/1.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">周cici酱</div>
-											<div class="intro">微博:周cici酱，qq群已满</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="2">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/2.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">mua车车酱</div>
-											<div class="intro">>微博：mua车车酱</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="3">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/3.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">PD丶叫兽</div>
-											<div class="intro">感谢曾一起走过的青春岁月！</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="4">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/4.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">大姨妈阿</div>
-											<div class="intro">>关注微博：GRACEKKKKKK</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="5">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/5.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">皮阿卡9丶</div>
-											<div class="intro">关注微博：皮阿卡9丶，感恩遇见。</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="6">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/6.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">李瑞轩</div>
-											<div class="intro">IG牛逼！</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="7">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/7.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">paipaipaipaipai</div>
-											<div class="intro">heeeey</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="8">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/8.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">小能同志</div>
-											<div class="intro">休息，有事私信</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="9">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/9.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">沙拉sala</div>
-											<div class="intro">微博关注：沙拉小宝贝</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="10">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/10.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">细软绫小萌</div>
-											<div class="intro">微博关注：细软绫小萌</div>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="stars-list" style="float: left; list-style: none; position: relative; width: 245px;">
-								<a href="javascript:void(0);"data-pdt-ele="11">
-									<div class="shuffer-stars">
-										<img class="thumb-img thumb-img-lazy" src="img/wrap/6/11.webp"/>
-										<div class="cover"></div>
-										<div class="shuffer-line"></div>
-										<div class="stars-info">
-											<div class="name">尢娜</div>
-											<div class="intro">微博尢娜酱 感恩遇见</div>
+											<div class="name">{{item.name}}</div>
+											<div class="intro">{{item.title}}</div>
 										</div>
 									</div>
 								</a>
@@ -1227,14 +362,13 @@
 					</div>
 				</div>
 				<div class="wall-layer wall-layer-right">
-					
 				</div>
 			</div>
 			<div class="arrows">
-				<div class="arrow arrow-left">
+				<div class="arrow arrow-left" @click="pre">
 					<a href="javascript:void(0);" class="bx-prev disabled"></a>
 				</div>
-				<div class="arrow arrow-right">
+				<div class="arrow arrow-right" @click="nex">
 					<a href="javascript:void(0);" class="bx-next"></a>
 				</div>
 			</div>
@@ -1244,7 +378,7 @@
 
 <!-- 频道版块 start -->
 <div class="index-channel">
-	<div class="index-channel-list index-channel-lol ">
+	<div class="index-channel-list index-channel-lol" id="lol">
 		<div class="bw">
 			<div class="index-channel-cnt clearfix">
 				<div class="index-channel-title">
@@ -1259,25 +393,18 @@
 						</a>
 					</div>
 					<ul class="labers clearfix">
-						<li><a href="javasctipt：void(0);">虎神</a></li>
-						<li><a href="javasctipt：void(0);">张嘉文</a></li>
-						<li><a href="javasctipt：void(0);">小师弟</a></li>
-						<li><a href="javasctipt：void(0);">君克</a></li>
-						<li><a href="javasctipt：void(0);">Rookie</a></li>
-						<li><a href="javasctipt：void(0);">芒果鱼</a></li>
-						<li><a href="javasctipt：void(0);">老刘</a></li>
-						<li><a href="javasctipt：void(0);">天琪</a></li>
+						<li v-for="item in labers"><a href="javasctipt：void(0);">{{item}}</a></li>
 					</ul>
 					<div class="more">
 						<a href="javascript:void(0)">更多</a>
 					</div>
 				</div>
 				<ul class="figrues-list figrues-list-line2 clearfix">
-					<li class="list-item">
+					<li class="list-item" v-for="item in list">
 						<a href="javascript:void(0)">
 							<div class="pd-thumb">
 								<div class="pictures">
-									<img src="img/wrap/bw/1/1.webp"class="thumb-img thumb-img-lazy"/>
+									<img :src="item.src"class="thumb-img thumb-img-lazy"/>
 								</div>
 								<div class="thumb-layer"></div>
 								<div class="play-btn"></div>
@@ -1285,172 +412,11 @@
 							<div class="thumb-info">
 								<div class="thumb-list">
 									<div class="title">
-										爱过。致熊猫
+										{{item.title}}
 									</div>
 									<div class="thumb-list-info">
-										<div class="nickname">一情书一</div>
-										<div class="thumb-number">7359</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/2.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										世界第一亚索
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">火苗OB解说</div>
-										<div class="thumb-number">4759</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/3.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										王者AD，接包天，上分
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">熊猫TV丶游戏</div>
-										<div class="thumb-number">2319</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/4.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										LPL春季赛 WE VS BLG
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">LPL熊猫官方直播</div>
-										<div class="thumb-number">1165166</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/5.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										等我叫我爸投资20亿进来拯救你
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">我真的没有钱畫訫</div>
-										<div class="thumb-number">29624</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/6.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										岁月极美，在于它的必然流逝
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">hiddenface</div>
-										<div class="thumb-number">21261</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/7.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										稻草人:438018372+这个群
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">一个很C的稻草人</div>
-										<div class="thumb-number">4329</div>
-									</div>
-									<div class="thumb-bar"></div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="list-item">
-						<a href="javascript:void(0)">
-							<div class="pd-thumb">
-								<div class="pictures">
-									<img src="img/wrap/bw/1/8.webp"class="thumb-img thumb-img-lazy"/>
-								</div>
-								<div class="thumb-layer"></div>
-								<div class="play-btn"></div>
-							</div>
-							<div class="thumb-info">
-								<div class="thumb-list">
-									<div class="title">
-										站好最后一班岗 加群
-									</div>
-									<div class="thumb-list-info">
-										<div class="nickname">国宝难民平欧巴丶</div>
-										<div class="thumb-number">3522</div>
+										<div class="nickname">{{item.name}}</div>
+										<div class="thumb-number">{{item.num}}</div>
 									</div>
 									<div class="thumb-bar"></div>
 								</div>
@@ -1464,47 +430,20 @@
 </div>
 
 <!--footer-container-->
-<div class="index-footer-container">
+<div class="index-footer-container" id="footer">
 	<div class="index-footer-picCode clearfix">
-		<div class="index-picCode weixin clearfix">
+		<div class="index-picCode weixin clearfix" v-for="item in title" :class="item.ti">
 			<div class="index-footer-intro index-picCode-dis">
 				<span class="index-picCode-title">
-					官方微信
+					{{item.info.one}}
 				</span>
 				<span class="index-picCode-direction">
-					扫一扫关注官方微信
+					{{item.info.two}}
 				</span>
 			</div>
 			<div class="index-footer-intro index-footer-code">
 				<img class="thumb-img-lazy"src="img/footer/weixin.webp"style="display: inline;"/>
 			</div>
-		</div>
-		<div class="index-picCode weibo clearfix">
-			<div class="index-footer-intro index-picCode-dis">
-				<span class="index-picCode-title">
-					官方微博
-				</span>
-				<span class="index-picCode-direction">
-					扫一扫关注官方微博
-				</span>
-			</div>
-			<div class="index-footer-intro index-footer-code">
-				<img class="thumb-img-lazy"src="img/footer/weibo.webp"style="display: inline;"/>
-			</div>
-		</div>
-		<div class="index-picCode app clearfix">
-			<div class="index-footer-intro index-picCode-dis">
-				<span class="index-download-app-title">
-					扫一扫下载App
-				</span>
-				<span class="index-picCode-direction picCode-link">
-					立即下载App
-				</span>
-			</div>
-			<div class="index-footer-intro index-footer-code">
-				<img class="thumb-img-lazy"src="img/footer/app.webp"style="display: inline;"/>
-			</div>
-			
 		</div>
 		<div class="index-foot-link">
 			<div class="index-join-panda clearfix">
@@ -1520,19 +459,13 @@
 	<ul class="index-footer-others">
 		<li class="index-footer-help clearfix">
 		<h2>主播帮助</h2>
-		<a href="javascript:void(0)">App下载</a>
-		<a href="javascript:void(0)">IOS户外直播</a>
-		<a href="javascript:void(0)">直播助手使用教程</a>
-		<a href="javascript:void(0)">Xsplit教程软件</a>
+		<a v-for="item in list_one" href="javascript:void(0)">{{item}}</a>
 		<h2>商务合作</h2>
 		<span>信箱：bd@panda.tv &nbsp;  QQ:3561132601</span>
 		</li>
 		<li class="clearfix">
 		<h2>使用规则</h2>
-		<a href="javascript:void(0)">用户行为准则</a>
-		<a href="javascript:void(0)">不良信息投诉举报</a>
-		<a href="javascript:void(0)">版权声明及投诉流程</a>
-		<a href="javascript:void(0)">内容管理及处置条例</a>
+		<a href="javascript:void(0)" v-for="item in list_two">{{item}}</a>
 		<h2>销售合作</h2>
 		<span>信箱：sales@panda.tv</span>
 		</li>
@@ -1554,34 +487,16 @@
 </footer>
 
 <!--lift-->
-		<div class="index-lift clearfix">
-			<div class="button anchor-btn">
+		<div class="index-lift clearfix" id="lift">
+			<div class="button" v-for="item in title" :class="item.ti">
 				<a class="breathe" href="javascript:void(0)"target="_blank">
 						<span class="icon"></span>
-						<span class="text">我要<br>开播</span>
-				</a>
-			</div>
-			<div class="button help-btn">
-				<a class="breathe"href="javascript:void(0)"target="_blank">
-						<span class="icon"></span>
-						<span class="text">帮助<br>中心</span>
-				</a>
-			</div>
-			<div class="button code-btn">
-				<a class="breathe"href="javascript:void(0)"target="_blank">
-
-						<span class="icon"></span>
-						<span class="text">扫码<br>直播</span>
-				</a>
-			</div>
-			<div class="button service-btn">
-				<a class="breathe"href="javascript:void(0)"target="_blank">
-						<span class="icon"></span>
-						<span class="text">客服<br>支持</span>
+						<span class="text">{{item.info.one}}<br>{{item.info.two}}</span>
 				</a>
 			</div>
 		</div>
 
+		<script src="../vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="JS/jquery-2.1.0.js" ></script>
 		<script charset="UTF-8" src="JS/new.js" ></script>
 	</body>
