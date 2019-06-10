@@ -1,0 +1,25 @@
+input[aria-invalid="true"] {
+  background: red;
+}
+
+input[aria-invalid="false"] {
+  background: green;
+}
+form span{
+	color: red;
+}
+body{
+	background: black;
+}
+
+.bo{
+	border:5px solid black;
+	margin-bottom: 50px;
+}
+.item{
+	border: 3px solid blueviolet;
+	margin-bottom: 10px;
+}
+.flip-list-move {
+  transition: transform 1s;
+}
