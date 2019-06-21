@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>居中对齐</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="a">
+    	<button @click='zhuce.index=!zhuce.index' v-if="cunc">注册</button>
+    	<button @click='deng.index=!deng.index'v-if="cunc">登录</button>
+    	<button @click='rem'v-if="!cunc">移除</button>
+    	<button @click='ale'>输出</button>
+    	<div v-if="zhuce.index" style="position: absolute;top: 300px;left: 300px;">
+    		<p><input type="text" name="name" id="name" v-model="zhuce.name" /></p>
+    		<p><input type="text" name="password" id="password" v-model='zhuce.pass_word'/></p>
+    		<p><button @click='inj'>注册</button></p>
+    	</div>
+    	
+    	<div v-if="deng.index" style="position: absolute;top: 100px;left: 300px;">
+    		<p><input type="text" name="name" id="name" v-model="deng.name" /></p>
+    		<p><input type="text" name="password" id="password" v-model='deng.pass_word'/></p>
+    		<p><input type="checkbox" name="time" id="seven" value="seven" v-model="deng.time"/></p>
+    		<p><input type="checkbox" name="time" id="five" value="five" v-model="deng.time"/></p>
+    		<p><button @click='set'>登录</button></p>
+    	</div>
+    	
+    	<div v-if="!cunc"id="sss" style="height: 100px;width: 100px;background:blueviolet;position: absolute;top:0;left: 400px;">
+    		
+    	</div>
+    </div>
+    
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#a',
+			data:{
+				zhuce:{
+					index:false,
+					name:'',
+					pass_word:'',
+				},
+				cunc:true,
+				deng:{
+					index:false,
+					name:'',
+					pass_word:'',
+					time:[],
+				}
+			},
+			created:function(){
+alert(document.cookie)
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i <ca.length; i++) {
+					if(/((user)?=)(\W)/.test(ca[i])&&ca[i].slice(1,5)=='user'){
+						var d=ca[i].slice(6)
+var c=JSON.parse(d)
+if(c.name){
+this.cunc=false}
+					}
+				}
+
+			},
+			methods:{
+				inj:function(){
+					alert('注册成功');
+				},
+				ale:function(){
+					alert(document.cookie);
+				},
+				set:function(){
+					var item={name:this.deng.name};
+					var it=JSON.stringify(item)
+					if(this.deng.time=='seven'){
+						var d = new Date();
+						d.setTime(d.getTime() + (7*24*60*60*1000));
+						document.cookie = "user=" + it + ";expires=" + d.toGMTString() + ";path=/";
+					}else{
+						document.cookie = "user=" + it + ";path=/";
+					}
+					
+					//同时上传后台数据
+				},
+				rem:function(){
+					var d = new Date();
+					d.setTime(d.getTime() - (7*24*60*60*1000));
+					var expires = "expires=" + d.toGMTString();
+					document.cookie = "user=" + 'none' + ";expires=" + d.toGMTString() + ";path=/";
+					
+				}
+			}
+		})
+		
+		
+	</script>
+</body>
+</html>
