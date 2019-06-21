@@ -51,9 +51,10 @@
 				}
 			},
 			created:function(){
-				alert(document.cookie)
+				
 				var decodedCookie = decodeURIComponent(document.cookie);
 				var ca = decodedCookie.split(';');
+				alert(ca.length)
 				for(var i = 0; i <ca.length; i++) {
 					if(/((user)?=)(\W)/.test(ca[i])&&ca[i].slice(1,5)=='user'){
 						var d=ca[i].slice(6)
