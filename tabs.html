@@ -56,13 +56,13 @@
 				var ca = decodedCookie.split(';');
 				
 				for(var i = 0; i <ca.length; i++) {
-					if(/((user)?=)(\W)/.test(ca[i])&&ca[i].slice(1,5)=='user'){
-						var d=ca[i].slice(6)
+					if(/((user)?=)(\W)/.test(ca[i])&&ca[i].slice(0,4)=='user'){
+						var d=ca[i].slice(5)
 						var c=JSON.parse(d)
 						alert(c.name)
 						if(c.name){
 						this.cunc=false}
-					}else{alert(ca[i]);alert(ca[i].slice(1,5))}
+					}else{alert(ca[i]);alert(ca[i].slice(0,4))}
 				}
 
 			},
