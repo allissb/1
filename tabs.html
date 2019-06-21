@@ -54,15 +54,15 @@
 				
 				var decodedCookie = decodeURIComponent(document.cookie);
 				var ca = decodedCookie.split(';');
-				alert(ca.length)
+				
 				for(var i = 0; i <ca.length; i++) {
 					if(/((user)?=)(\W)/.test(ca[i])&&ca[i].slice(1,5)=='user'){
 						var d=ca[i].slice(6)
-var c=JSON.parse(d)
-alert(c.name)
-if(c.name){
-this.cunc=false}
-					}
+						var c=JSON.parse(d)
+						alert(c.name)
+						if(c.name){
+						this.cunc=false}
+					}else{alert(ca[i]);alert(ca[i].slice(1,5))}
 				}
 
 			},
