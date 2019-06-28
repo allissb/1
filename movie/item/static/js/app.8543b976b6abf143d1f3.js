@@ -174,10 +174,10 @@ webpackJsonp([1], {
 						alert(e)
 					},
 					my_home: function() {
-						location.href="file:///C:/Users/Administrator/Desktop/材料/VUE/dist/movie/ac/index.html"
+						location.href="../ac/index.html#/all"
 					},
 					aa: function() {
-						location.href="file:///C:/Users/Administrator/Desktop/材料/VUE/dist/movie/index.html#/login"
+						location.href="../index.html#/login"
 					}
 				},
 				beforeCreate: function() {},
