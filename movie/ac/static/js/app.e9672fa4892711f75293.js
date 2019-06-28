@@ -73,10 +73,10 @@ webpackJsonp([1], {
 						this.$set(this.list_num, e, 2)
 					},
 					my_home: function() {
-						location.href="file:///C:/Users/Administrator/Desktop/材料/VUE/dist/movie/ac/index.html"
+						window.location.reload();
 					},
 					aa: function() {
-						location.href="file:///C:/Users/Administrator/Desktop/材料/VUE/dist/movie/index.html#/login";
+						location.href="../index.html#/login";
 					}
 				},
 				beforeCreate: function() {},
@@ -367,11 +367,7 @@ webpackJsonp([1], {
 						component: u
 					}]
 				}),
-				created:function(){
-					this.$router.push({
-						path: 'all',
-					})
-				}
+				created:function(){}
 			},
 			h = {
 				render: function() {
