@@ -215,7 +215,7 @@ webpackJsonp([1], {
 			m = {
 				data: function() {
 					return {
-						home: "ac/index.html",
+						home: "ac/index.html#/all",
 						href: ["item/index.html#/1", "item/index.html#/2", "item/index.html#/3", "item/index.html#/4"],
 						img: ["./static/movie/main/1.jpg", "./static/movie/main/2.jpg", "./static/movie/main/3.jpg", "./static/movie/main/4.jpg"],
 						name: ["波西米亚狂想曲", "一条狗的使命2", "大侦探皮卡丘", "企鹅公路"],
@@ -313,7 +313,7 @@ webpackJsonp([1], {
 					home_home: function() {},
 					href_href: function() {},
 					my_home: function() {
-						location.href="file:///C:/Users/Administrator/Desktop/材料/VUE/dist/movie/ac/index.html"
+						location.href="ac/index.html#/all"
 					},
 					aa: function() {
 						this.$router.push({
