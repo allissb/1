@@ -27,23 +27,23 @@ webpackJsonp([1], {
 							middle: {
 								title_c: "波西米亚狂想曲",
 								title_e: "Bohemian Rhapsody",
-								daoyan_src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1403264395.93.jpg",
+								daoyan_src: "./static/item/img/10.jpg",
 								daoyan_name: "布莱恩·辛格",
 								type: "剧情 传记 音乐",
 								country: "英国 美国",
 								orther: "波希米亚狂想曲：摇滚传说(港),波希米亚狂想曲(台)"
 							},
 							right: [{
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1860.jpg",
+								src: "./static/item/img/11.jpg",
 								name: "拉米·马雷克"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1548177691.13.jpg",
+								src: "./static/item/img/12.jpg",
 								name: "本·哈迪"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p13772.jpg",
+								src: "./static/item/img/13.jpg",
 								name: "约瑟夫·梅泽罗"
 							}, {
-								src: "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1463815670.88.jpg",
+								src: "./static/item/img/14.jpg",
 								name: "格威利姆·李"
 							}],
 							content: "本片是对皇后乐队、传奇主唱弗雷迪·莫库里以及他们音乐的致敬盛宴，这是一段充满爱、痛苦、接纳和音乐的旅程。 弗雷迪·莫库里（拉米·马雷克 饰）曾是希思罗机场的一名普通搬运工，对音乐满腔热血的他，与布莱恩·梅（格威利姆·李 饰）、罗杰·泰勒（本·哈迪 饰）、约 翰·迪肯（约瑟夫·梅泽罗 饰）组成皇后乐队。这个殿堂级乐队的从无到有，从疏离到重聚，从低谷到巅峰，仿佛就是弗雷迪一生的缩影。在最后的日子里，弗雷迪做了生命中最重要的决定——在音乐史上最伟大的“拯救生命”大型摇滚乐演唱会上，将所有热血付诸于歌声。©豆瓣",
@@ -60,23 +60,23 @@ webpackJsonp([1], {
 							middle: {
 								title_c: "一条狗的使命2",
 								title_e: "A Dog's Journey",
-								daoyan_src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1498769826.44.jpg",
+								daoyan_src: "./static/item/img/20.jpg",
 								daoyan_name: "盖尔·曼库索",
 								type: "剧情 喜剧 家庭",
 								country: "美国",
 								orther: "一条狗的旅程,为了与你相遇2(台),再见亦是狗朋友2(港),A Dog's Purpose 2"
 							},
 							right: [{
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p52.jpg",
+								src: "./static/item/img/21.jpg",
 								name: "丹尼斯·奎德"
 							}, {
-								src: "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p26177.jpg",
+								src: "./static/item/img/22.jpg",
 								name: "凯瑟琳·普雷斯科特"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1558029075.72.jpg",
+								src: "./static/item/img/23.jpg",
 								name: "刘宪华"
 							}, {
-								src: "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p2657.jpg",
+								src: "./static/item/img/24.jpg",
 								name: "玛格·海根柏格"
 							}],
 							content: "小狗贝利延续使命，在主人伊森的嘱托下，通过不断的生命轮回， 执着守护伊森的孙女CJ，将伊森对孙女的爱与陪伴，当做最重要的 使命和意义，最终帮助CJ收获幸福，再次回到主人伊森身边。",
@@ -98,23 +98,23 @@ webpackJsonp([1], {
 							middle: {
 								title_c: "大侦探皮卡丘",
 								title_e: "Pokémon Detective Pikachu",
-								daoyan_src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1446386865.82.jpg",
+								daoyan_src: "./static/item/img/30.jpg",
 								daoyan_name: "罗伯·莱特曼",
 								type: "喜剧 动画 奇幻",
 								country: "美国 日本",
 								orther: "精灵宝可梦：大侦探皮卡丘,POKÉMON 名侦探皮卡丘(台),宠物小精灵之名侦探皮卡丘,精灵宝可梦之名侦探皮卡丘,宠物小精灵,宠物小精灵真人版,精灵宝可梦,名侦探皮卡丘,Detective Pikachu,Pokemon"
 							},
 							right: [{
-								src: "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p48608.jpg",
+								src: "./static/item/img/31.jpg",
 								name: "瑞恩·雷诺兹"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1523860646.23.jpg",
+								src: "./static/item/img/32.jpg",
 								name: "贾斯蒂斯·史密斯"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1430023168.56.jpg",
+								src: "./static/item/img/33.jpg",
 								name: "凯瑟琳·纽顿"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1440587200.11.jpg",
+								src: "./static/item/img/34.jpg",
 								name: "克里斯·吉尔"
 							}],
 							content: "好莱坞真人电影《大侦探皮卡丘》（暂译）讲述了蒂姆·古德曼（贾 斯 提·史密斯饰） 为寻找下落不明的父亲来到莱姆市，意外与父亲的前宝可梦搭档大侦探皮卡丘相遇，并惊讶地发现自己是唯一能听懂皮卡丘说话的人类，他们决定组队踏上揭开真相的刺激冒险之路。探案过程中他们邂逅了各式各样 的宝可梦，并意外发现了一个足以毁灭整个宝可梦宇宙的惊天阴谋。该电影改编自任天堂3DS同名游戏，由罗伯·莱特曼导演，瑞安·雷诺兹为大侦探皮卡丘配音，贾斯提斯·史密斯、凯瑟琳·纽顿等主演。",
@@ -127,27 +127,27 @@ webpackJsonp([1], {
 							four: []
 						}, {
 							index: 4,
-							img: "./static/item/img/4.jpg",
+							img: "./static/item/img/40.jpg",
 							middle: {
 								title_c: "企鹅公路",
 								title_e: "ペンギン・ハイウェイ",
-								daoyan_src: "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p51197.jpg",
+								daoyan_src: "./static/item/img/4.jpg",
 								daoyan_name: "石田祐康",
 								type: "动画 奇幻 冒险",
 								country: "日本",
 								orther: "企鹅梦幻街(港),企鹅高速公路,Penguin Highway"
 							},
 							right: [{
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1484904556.03.jpg",
+								src: "./static/item/img/41.jpg",
 								name: "北香那"
 							}, {
-								src: "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1493110606.27.jpg",
+								src: "./static/item/img/42.jpg",
 								name: "苍井优"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p4971.jpg",
+								src: "./static/item/img/43.jpg",
 								name: "钉宫理惠"
 							}, {
-								src: "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1361254826.22.jpg",
+								src: "./static/item/img/44.jpg",
 								name: "潘惠美"
 							}],
 							content: "讲述了在一个原本百无聊赖的平凡夏天，一群企鹅凭空出现在远离大海的小镇之上。在目睹了牙医大姐姐所投掷的可乐罐变成企鹅之后，有着强烈好奇心的小少年青山同学决心一探究竟，并展开了一场不可思议而令人难忘的夏季冒险。 本片改编自日本著名作家森见登美彦同名小说作品。",
