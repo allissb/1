@@ -73,7 +73,8 @@ li,strong{
 	content: "\E6AE";
 }
 #panda_header{
-	width:100%;
+	width:1440px;
+	margin: 0 auto;
 	height: 56px;
 }
 .pheader{
@@ -81,6 +82,7 @@ li,strong{
 	height: 56px;
 	font-weight: 400;
 	font-size:100%;
+	position: relative;
 }
 .pheader-inner{
 	position:relative;
@@ -387,6 +389,8 @@ div.button{
 .index-slider-video-container{
 	border-bottom:10px solid #ff8605 ;
 	background: url(./img/wrap/ab6c1f76c49e2025675366f1b2cdb959.web.png)50% 50%  no-repeat;position: relative;
+	width: 1440px;
+	margin: 0 auto;
 }
 .index-slider-video-container:before{
 	content: "";
@@ -1061,7 +1065,8 @@ margin-top:5px;
 	height: 310px;
 	overflow: hidden;
 	margin-bottom: 10px;
-	min-width: 980px;
+	width: 980px;
+	margin: 0 auto;
 }
 .index-shuffer .bw{
 	height: 310px;
@@ -1275,7 +1280,8 @@ margin-top:5px;
 	position: relative;
 	overflow:hidden;
 	visibility: visible;
-	width: 100%;
+	width: 1440px;
+	margin: 0 auto;
 }
 .index-footer-container .index-footer-picCode{
 	width: 980px;
