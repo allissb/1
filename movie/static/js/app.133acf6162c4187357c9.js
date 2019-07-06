@@ -391,9 +391,6 @@ webpackJsonp([1], {
 						staticClass: "body-contain"
 					}, [n("div", {
 						staticClass: "main",
-						staticStyle: {
-							height: "1000px"
-						}
 					}, [n("div", {
 						staticClass: "showlists"
 					}, [n("div", {
@@ -458,32 +455,14 @@ webpackJsonp([1], {
 							staticClass: "lists"
 						}, [n("div", {
 							staticClass: "list_title",
-							staticStyle: {
-								height: "40px",
-								"line-height": "40px"
-							}
 						}, [n("div", {
 							staticClass: "left",
-							staticStyle: {
-								height: "40px",
-								"line-height": "40px",
-								float: "left"
-							}
 						}, [n("img", {
-							staticStyle: {
-								"margin-right": "10px",
-								height: "20px",
-								width: "20px",
-								"border-radius": "10px",
-								"vertical-align": "middle"
-							},
+							staticClass:"img-title",
 							attrs: {
 								src: i("1xyA")
 							}
 						}), e._v(" "), n("a", {
-							staticStyle: {
-								"margin-right": "10px"
-							},
 							attrs: {
 								href: e.home
 							},
@@ -492,28 +471,11 @@ webpackJsonp([1], {
 							}
 						}, [e._v("admin")]), e._v(" "), n("span", [e._v("写了影评")])]), e._v(" "), n("div", {
 							staticClass: "right",
-							staticStyle: {
-								height: "40px",
-								"line-height": "40px",
-								float: "right"
-							}
 						}, [e._v("\n\t\t\t\t\t\t\t2019-06-15 00:03\n\t\t\t\t\t\t")])]), e._v(" "), n("div", {
 							staticClass: "lists_commo",
-							staticStyle: {
-								height: "150px"
-							}
 						}, [n("div", {
 							staticClass: "left",
-							staticStyle: {
-								height: "100%",
-								float: "left",
-								"line-height": "100%"
-							}
 						}, [n("a", {
-							staticStyle: {
-								display: "inline-block",
-								height: "100%"
-							},
 							attrs: {
 								href: e.href[r]
 							},
@@ -523,18 +485,11 @@ webpackJsonp([1], {
 								}
 							}
 						}, [n("img", {
-							staticStyle: {
-								height: "100%",
-								"vertical-align": "top"
-							},
 							attrs: {
 								src: t
 							}
 						})]), e._v("\n\t\t\t\t\t\t\t呵呵\n\t\t\t\t\t\t")]), e._v(" "), n("div", {
 							staticClass: "block",
-							staticStyle: {
-								float: "right"
-							}
 						}, [n("el-rate", {
 							attrs: {
 								disabled: "",
