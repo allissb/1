@@ -13,74 +13,6 @@
 	var step=0;
 	var ire=0;
 	aspan.innerHTML=step;
-	var aPos=[
-	[
-	{"left":0,"top":0},
-	{"left":80,"top":0},
-	{"left":240,"top":0},
-	{"left":0,"top":160},
-	{"left":80,"top":160},
-	{"left":240,"top":160},
-	{"left":0,"top":320},
-	{"left":80,"top":240},
-	{"left":160,"top":240},
-	{"left":240,"top":320},
-	{"left":80,"top":320},
-	{"left":160,"top":320}
-	],
-	[{"left":0,"top":0},
-	{"left":80,"top":0},
-	{"left":240,"top":0},
-	{"left":0,"top":240},
-	{"left":80,"top":160},
-	{"left":240,"top":240},
-	{"left":0,"top":160},
-	{"left":80,"top":240},
-	{"left":160,"top":240},
-	{"left":240,"top":160},
-	{"left":80,"top":320},
-	{"left":160,"top":320}
-	],
-	[{"left":0,"top":0},
-	{"left":80,"top":0},
-	{"left":240,"top":0},
-	{"left":0,"top":240},
-	{"left":80,"top":240},
-	{"left":240,"top":240},
-	{"left":0,"top":160},
-	{"left":80,"top":160},
-	{"left":160,"top":160},
-	{"left":240,"top":160},
-	{"left":80,"top":320},
-	{"left":160,"top":320}
-	],
-	[{"left":0,"top":80},
-	{"left":80,"top":0},
-	{"left":240,"top":80},
-	{"left":0,"top":240},
-	{"left":80,"top":160},
-	{"left":240,"top":240},
-	{"left":0,"top":0},
-	{"left":80,"top":240},
-	{"left":160,"top":240},
-	{"left":240,"top":0},
-	{"left":80,"top":320},
-	{"left":160,"top":320}
-	],
-	[{"left":160,"top":0},
-	{"left":0,"top":0},
-	{"left":240,"top":0},
-	{"left":0,"top":240},
-	{"left":0,"top":160},
-	{"left":80,"top":240},
-	{"left":160,"top":160},
-	{"left":160,"top":240},
-	{"left":240,"top":160},
-	{"left":240,"top":240},
-	{"left":160,"top":320},
-	{"left":240,"top":320}
-	]
-	];
 	se.onchange=function(){
 		ire=this.value;
 		reset();
@@ -122,23 +54,23 @@
 		}
 	}
 	function ccjc(a,b){
-		var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop)&&(sp[0].offsetTop+sp[1].offsetTop-a.offsetTop-a.offsetTop==80);
-		var t_b=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft)&&(sp[0].offsetLeft+sp[1].offsetLeft-a.offsetLeft-a.offsetLeft==80);
+		var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop)&&(sp[0].offsetTop+sp[1].offsetTop-a.offsetTop-a.offsetTop==120);
+		var t_b=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft)&&(sp[0].offsetLeft+sp[1].offsetLeft-a.offsetLeft-a.offsetLeft==120);
 		if(t_a||t_b){
 			if(t_a){
-			if(a.offsetLeft-b.offsetLeft==80){
+			if(a.offsetLeft-b.offsetLeft==120){
 				a.style.left=adiv.left+"px";
-				sp[1].style.left=sp[0].style.left=aData.left+80+"px";
-			}else if(a.offsetLeft-b.offsetLeft==-160){
-				a.style.left=adiv.left-80+"px";
+				sp[1].style.left=sp[0].style.left=aData.left+120+"px";
+			}else if(a.offsetLeft-b.offsetLeft==-240){
+				a.style.left=adiv.left-120+"px";
 				sp[1].style.left=sp[0].style.left=aData.left+"px";
 			}
 		}else if(t_b){
-			if(a.offsetTop-b.offsetTop==80){
+			if(a.offsetTop-b.offsetTop==120){
 				a.style.top=adiv.top+"px";
-				sp[1].style.top=sp[0].style.top=aData.top+80+"px";
-			}else if(a.offsetTop-b.offsetTop==-160){
-				a.style.top=adiv.top-80+"px";
+				sp[1].style.top=sp[0].style.top=aData.top+120+"px";
+			}else if(a.offsetTop-b.offsetTop==-240){
+				a.style.top=adiv.top-120+"px";
 				sp[1].style.top=sp[0].style.top=aData.top+"px";
 			}
 		}
@@ -148,7 +80,7 @@
 		}
 	}
 function xbjc(a,b){
-	if((a.offsetLeft==b.offsetLeft&&Math.abs(a.offsetTop-b.offsetTop)==80)||(a.offsetTop==b.offsetTop&&Math.abs(a.offsetLeft-b.offsetLeft)==80))
+	if((a.offsetLeft==b.offsetLeft&&Math.abs(a.offsetTop-b.offsetTop)==120)||(a.offsetTop==b.offsetTop&&Math.abs(a.offsetLeft-b.offsetLeft)==120))
 	{
 		a.style.left=adiv.left+"px";
 		a.style.top=adiv.top+"px";
@@ -159,19 +91,19 @@ function xbjc(a,b){
 	}
 }
 function gyjc(a,b){
-	var t_a=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft)&&(Math.abs(a.offsetTop-b.offsetTop)==80)&&(sp[0].offsetLeft+sp[1].offsetLeft-a.offsetLeft-a.offsetLeft==80);
-	var t_b=(a.offsetTop==b.offsetTop)&&(a.offsetLeft-b.offsetLeft==80);
-	var t_c=(a.offsetTop==b.offsetTop)&&(a.offsetLeft-b.offsetLeft==-160);
+	var t_a=(sp[0].offsetTop==sp[1].offsetTop)&&(a.offsetLeft==b.offsetLeft)&&(Math.abs(a.offsetTop-b.offsetTop)==120)&&(sp[0].offsetLeft+sp[1].offsetLeft-a.offsetLeft-a.offsetLeft==120);
+	var t_b=(a.offsetTop==b.offsetTop)&&(a.offsetLeft-b.offsetLeft==120);
+	var t_c=(a.offsetTop==b.offsetTop)&&(a.offsetLeft-b.offsetLeft==-240);
 	if(t_a||t_b||t_c){
 		if(t_a){
 		a.style.top=adiv.top+"px";
 		sp[1].style.top=sp[0].style.top=aData.top+"px";
 		}else if(t_b){
 		a.style.left=adiv.left+"px";
-		b.style.left=aData.left+80+"px";
+		b.style.left=aData.left+120+"px";
 		}
 		else if(t_c){
-			a.style.left=adiv.left-80+"px";
+			a.style.left=adiv.left-120+"px";
 			b.style.left=aData.left+"px";
 		}
 		aData={"left":a.offsetLeft,"top":a.offsetTop};
@@ -179,18 +111,18 @@ function gyjc(a,b){
 	}
 }
 function sxjc(a,b){
-	var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop)&&(Math.abs(a.offsetLeft-b.offsetLeft)==80)&&(sp[0].offsetTop+sp[1].offsetTop-a.offsetTop-a.offsetTop==80);
-	var t_b=(a.offsetLeft==b.offsetLeft)&&(a.offsetTop-b.offsetTop==80);
-	var t_c=(a.offsetLeft==b.offsetLeft)&&(a.offsetTop-b.offsetTop==-160);
+	var t_a=(sp[0].offsetLeft==sp[1].offsetLeft)&&(a.offsetTop==b.offsetTop)&&(Math.abs(a.offsetLeft-b.offsetLeft)==120)&&(sp[0].offsetTop+sp[1].offsetTop-a.offsetTop-a.offsetTop==120);
+	var t_b=(a.offsetLeft==b.offsetLeft)&&(a.offsetTop-b.offsetTop==120);
+	var t_c=(a.offsetLeft==b.offsetLeft)&&(a.offsetTop-b.offsetTop==-240);
 	if(t_a||t_b||t_c){
 		if(t_a){
 			a.style.left=adiv.left+"px";
 			sp[1].style.left=sp[0].style.left=aData.left+"px";
 		}else if(t_b){
 			a.style.top=adiv.top+"px";
-			b.style.top=aData.top+80+"px";
+			b.style.top=aData.top+120+"px";
 		}else if(t_c){
-			a.style.top=adiv.top-80+"px";
+			a.style.top=adiv.top-120+"px";
 			b.style.top=aData.top+"px";
 		}
 		aData={"left":a.offsetLeft,"top":a.offsetTop};
@@ -203,7 +135,7 @@ function app(ob){
 	obimg.src=obimg.src.replace(/(\w+)(?=.png)/,"$1"+1)
 }
 function isfinish(){
-	if(aLi[1].offsetLeft==80&&aLi[1].offsetTop==240){
+	if(aLi[1].offsetLeft==120&&aLi[1].offsetTop==240){
 		alert("恭喜你用"+step+"步完成了游戏！");
 		reset();
 	}
