@@ -379,23 +379,9 @@ webpackJsonp([1], {
 					}, [i("span", [e._v("影评  全部" + e._s(e.current.four.length) + "条")]), e._v(" "), i("span", {
 						staticClass: "right"
 					}, [e._v("写留言")])]), e._v(" "), e._m(4)])]) : e._e(), e._v(" "), e.current ? e._e() : i("div", {
-						staticClass: "body_item",
-						staticStyle: {
-							"margin-top": "77px",
-							"text-align": "center",
-							height: "500px",
-							"line-height": "500px"
-						}
+						staticClass: "body_item_none",
 					}, [e._v("\n\t\t页面不存在\n\t")]), e._v(" "), e.current ? i("div", {
 						staticClass: "footer",
-						staticStyle: {
-							height: "80px",
-							"line-height": "80px",
-							"text-align": "center",
-							"margin-top": "30px",
-							"font-size": "12px",
-							color: "rgba(0,0,0,.65)"
-						}
 					}, [e._v("\n\t\t科科 ©2019 Created me\n\t")]) : e._e()], 1)
 				},
 				staticRenderFns: [function() {
@@ -426,13 +412,6 @@ webpackJsonp([1], {
 					return t("div", {
 						staticClass: "inpu_a"
 					}, [t("textarea", {
-						staticStyle: {
-							"margin-top": "0px",
-							"margin-bottom": "0px",
-							"border-radius": "5px",
-							width: "800px",
-							padding: "4px 11px"
-						},
 						attrs: {
 							placeholder: "回复:home",
 							rows: "4"
