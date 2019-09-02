@@ -21,14 +21,14 @@ right: 0;
 margin: auto;
 	width: 960px;
 	height: 600px;
-	background:url('img/bg.png') no-repeat;
+	background:url('bg.png') no-repeat;
 	background-size: 960px 600px;
 }
 .right{
 	float: left;
 	width: 480px;
 	height: 600px;
-	background: url('img/bg.png');
+	background: url('bg.png');
 	background-size:cover;
 	font-size: 14px;
 	color: darkorange;
@@ -63,7 +63,7 @@ ul{
 	position: relative;
 	width: 480px;
 	height:600px;
-	background: url('img/ck.png') no-repeat;
+	background: url('ck.png') no-repeat;
 	background-position: 120px 480px;
 	background-size: 240px 120px;
 }
@@ -83,7 +83,7 @@ ul{
 }
 .title{
 	height: 90px;
-	background: url('img/title.png');
+	background: url('title.png');
 	background-size:480px 90px ;
 }
 .JJ{
