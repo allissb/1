@@ -36,19 +36,19 @@ webpackJsonp([1], {
 						info: [{
 							sty: "yp",
 							time: "2019-06-23 22:59",
-							id: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549558913.jpg",
+							id: "../item/static/item/img/1.jpg",
 							text: "hehehehe",
 							hre: "../item/index.html#/1"
 						}, {
 							sty: "ly",
 							time: "2019-06-15 07:59",
-							id: "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2555859678.jpg",
+							id: "../item/static/item/img/2.jpg",
 							text: "heheheh",
 							hre: "../item/index.html#/2"
 						}, {
 							sty: "ly",
 							time: "2019-06-14 13:25",
-							id: "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2555538168.jpg",
+							id: "../item/static/item/img/3.jpg",
 							text: "hehehe",
 							hre: "../item/index.html#/3"
 						}]
