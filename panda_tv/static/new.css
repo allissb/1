@@ -1065,7 +1065,7 @@ margin-top:5px;
 	height: 310px;
 	overflow: hidden;
 	margin-bottom: 10px;
-	width: 980px;
+	min-width: 980px;
 	margin: 0 auto;
 }
 .index-shuffer .bw{
